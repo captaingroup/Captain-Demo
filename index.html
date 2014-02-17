@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Heart Hospital</title>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<script src="http://listjs.com/no-cdn/list.js"></script> 
+
+</head>
+
+<body>
+
+
+<section id="loginBar"></section>
+
+<section id="currentlyAdmittedPatients">
+	
+<div id="patients">
+
+	<h2>Currently Admitted Patients</h2>
+    <input class="search" />
+    <span class="sort" data-sort="patientName">Sort by name</span>
+    <span class="sort" data-sort="medicalCondition">Sort by Medical Condition</span>
+
+	<ul class="columnHeadings">
+    	<li>
+        	<p class="patientIDHeading">Patient ID</p>
+        </li>
+        <li>
+        	<p class="patientNameHeading">Patient Name</p>
+        </li>
+        <li>
+        	<p class="patientAgeHeading">Patient Age</p>
+        </li>
+        <li>
+        	<p class="medicalConditionHeading">Medical Condition</p>
+        </li>
+        <li>
+        	<p class="dateAdmittedHeading">Date Admitted</p>
+        </li>
+    </ul>
+
+    <ul class="list">
+       <li>
+           <p class="patientID">0123456789</p>
+           <p class="patientName">Jonny Walthstow</p>
+           <p class="patientAge">25</p>
+           <p class="medicalCondition">Atherosclerosis</p>
+           <p class="dateAdmitted">01/01/14</p>
+
+       </li>
+       <li>
+           <p class="patientID">1234567890</p>
+           <p class="patientName">Jamie Berlin</p>
+           <p class="patientAge">22</p>
+           <p class="medicalCondition">Atherosclerosis</p>
+           <p class="dateAdmitted">01/01/14</p>
+       </li>
+    </ul>
+</div>
+
+<script>
+var options = {
+    valueNames: [ 'patientID', 'patientName', 'patientAge', 'medicalCondition', 'dateAdmitted']
+};
+
+var patients = new List('patients', options);
+patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
+patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
+
+</script>
+
+</section>
+
+
+</body>
+</html>
