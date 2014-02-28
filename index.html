@@ -51,15 +51,11 @@
 </div>
 
 <script>
-var values = {
+var options = {
     valueNames: [ 'patientID', 'patientName', 'patientAge', 'medicalCondition', 'dateAdmitted']
 };
 
-var options = {
-    item: '<li><p class="patientID"></p><p class="patientName"></p><p class="patientAge"></p><p class="medicalCondition"></p><p class="dateAdmitted"></p></li>'
-};
-
-var patients = new List('patients', options, values);
+var patients = new List('patients', options);
 patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
 patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
 
