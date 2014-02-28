@@ -26,6 +26,15 @@ body{
 
 .CAPHeaderBar {
 	background-color: #999;
+	display: inline-block;
+}
+
+.CAPHeaderBarTitle {
+	float: left;
+}
+
+.CAPHeaderBarSearch {
+	float: left;
 }
 
 
