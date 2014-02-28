@@ -5,9 +5,16 @@ body{
 	background-color: #8b8b8b;
 }
 
+/**
+*
+* Currently Admitted Patients Stylings
+* Includes Titles, Search Field, Column Headings and Column data styles
+*
+*/
+
 #currentlyAdmittedPatients{
 	width: 80%;
-	height: 40%;
+	height: 60%;
 	overflow:scroll;
 	margin-left: auto;
 	margin-right: auto;
@@ -16,6 +23,11 @@ body{
 	-moz-box-shadow: 0 0 25px rgba(0,0,0,.46);
 	box-shadow: 0 0 25px rgba(0,0,0,.46);
 }
+
+.CAPHeaderBar {
+	background-color: #999;
+}
+
 
 
 
