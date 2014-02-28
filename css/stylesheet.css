@@ -63,12 +63,11 @@ body{
   width: 100%;
   padding: 0;
   margin: 0;
-  text-decoration: none;
 }
 
 .list > li {
-  background-color: #eee;
-  text-decoration: none;
+	background-color: #eee;
+	list-style-type: none;
 }
 
 .avatar {
