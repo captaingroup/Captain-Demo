@@ -52,51 +52,9 @@ body{
 	width: 20%;
 }
 
-
-
-
-.columnHeadings {
-	font-family:sans-serif;
-  	margin:0;
-  	padding:20px 0 0;
+.hello {
+	background-color: #090;
 }
-.columnHeadings > li {
-	display:inline;
-	padding:10px;
-  	box-shadow: inset 0 1px 0 #fff;
-}
-.patientIDHeading{
-	display: inline-block;
-	width: 19%;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.patientNameHeading{
-	display: inline-block;
-	width: 20%;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.patientAgeHeading{
-	display: inline-block;
-	width: 10%;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.medicalConditionHeading{
-	display: inline-block;
-	width: 20%;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.dateAdmittedHeading{
-	display: inline-block;
-	width: 19%;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-
-
 
 
 
