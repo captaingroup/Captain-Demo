@@ -65,7 +65,6 @@ body{
 }
 
 .list > li {
-  display: inline-block;
   background-color: #eee;
 }
 
