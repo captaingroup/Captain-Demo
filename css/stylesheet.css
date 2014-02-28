@@ -27,14 +27,29 @@ body{
 .CAPHeaderBar {
 	background-color: #999;
 	display: inline-block;
+	width: 100%;
 }
 
 .CAPHeaderBarTitle {
+	width: 80%;
+	font-size: 24px;
 	float: left;
 }
 
 .CAPHeaderBarSearch {
+	width: 20%;
+	float: right;
+}
+
+.CAPColumnHeadingsBar {
+	display: inline-block;
+	width: 100%;
+}
+
+.CAPColumnTitle {
 	float: left;
+	text-align: center;
+	width: 20%;
 }
 
 
