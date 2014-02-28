@@ -91,7 +91,7 @@ p {
 .patientID{
 	float: left;
 	width: 20%;
-	text-align: center;
+	text-align: left;
 }
 .patientName{
 	float: left;
