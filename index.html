@@ -30,24 +30,6 @@
     </div>
 
 	
-	<ul class="columnHeadings">
-    	<li>
-        	<p class="patientIDHeading">Patient ID</p>
-        </li>
-        <li>
-        	<p class="patientNameHeading">Patient Name</p>
-        </li>
-        <li>
-        	<p class="patientAgeHeading">Patient Age</p>
-        </li>
-        <li>
-        	<p class="medicalConditionHeading">Medical Condition</p>
-        </li>
-        <li>
-        	<p class="dateAdmittedHeading">Date Admitted</p>
-        </li>
-    </ul>
-
     <ul class="list">
        <li>
            <p class="patientID">0123456789</p>
@@ -69,7 +51,7 @@
 
 <script>
 var options = {
-    valueNames: [ 'patientID', 'patientName', 'patientAge', 'medicalCondition', 'dateAdmitted']
+    valueNames: [ '<div class="hello"><h3>patientID</h3></div>', 'patientName', 'patientAge', 'medicalCondition', 'dateAdmitted']
 };
 
 var patients = new List('patients', options);
