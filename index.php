@@ -134,9 +134,9 @@
 			$test = $registrant['name'];
 			
 			echo "<script> 
-			spge = <?php echo $test ;?>;
-			
-			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
+			testing = '<?php echo $test ;?>';
+			alert(testing);
+			patients.add( { patientID: '2651994780', patientName: testing, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
 
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
