@@ -61,6 +61,11 @@
 
 	</script>
     
+    <script> 
+			spge = "hello";
+			
+			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>
+
 	<script>
 	$(document).ready(function(){
   		$('#list li:nth-child(odd)').addClass('listAlternate');
@@ -79,10 +84,10 @@
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
-    $host = "sql3.freemysqlhosting.net";
-    $user = "sql331497";
-    $pwd = "sI2*yG2*";
-    $db = "sql331497";
+    $host = "eu-cdbr-azure-west-b.cloudapp.net";
+    $user = "be224999e5fadd";
+    $pwd = "103685ae";
+    $db = "uclsystAzPBrx7bc";
     // Connect to database.
     try {
         $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
@@ -114,7 +119,7 @@
     echo "<h3>Your're registered!</h3>";
     }
     // Retrieve data
-    $sql_select = "SELECT * `3-Patient`";
+    $sql_select = "SELECT * FROM registration_tbl";
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
     if(count($registrants) > 0) {
@@ -126,7 +131,7 @@
         echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
 			
-			$test = $registrant['`Patient Name`'];
+			$test = $registrant['name'];
 			
 			echo "<script> 
 			testing = '$test';
