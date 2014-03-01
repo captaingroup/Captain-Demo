@@ -73,14 +73,7 @@
 	</script>
     
     
-    
-    <form method="post" action="index.php" enctype="multipart/form-data" >
-      Name  <input type="text" name="name" id="name"/></br>
-      Email <input type="text" name="email" id="email"/></br>
-      Company <input type="text" name="company" id="company"/></br>
-      <input type="submit" name="submit" value="Submit" />
-</form>
-<?php
+    <?php
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
@@ -97,56 +90,32 @@
         die(var_dump($e));
 		echo 'did not work';
     }
-    // Insert registration info
-    if(!empty($_POST)) {
-    try {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-	$company = $_POST['company'];
-        $date = date("Y-m-d");
-        // Insert data
-        $sql_insert = "INSERT INTO registration_tbl (name, email, company, date) 
-                   VALUES (?,?,?,?)";
-        $stmt = $conn->prepare($sql_insert);
-        $stmt->bindValue(1, $name);
-        $stmt->bindValue(2, $email);
-	$stmt->bindValue(3, $company);
-        $stmt->bindValue(4, $date);
-        $stmt->execute();
-    }
-    catch(Exception $e) {
-        die(var_dump($e));
-    }
-    echo "<h3>Your're registered!</h3>";
-    }
+    
     // Retrieve data
     $sql_select = "SELECT * FROM `3-Patient`";
     $stmt = $conn->query($sql_select);
-    $registrants = $stmt->fetchAll(); 
-    if(count($registrants) > 0) {
-        echo "<h2>People who are registered:</h2>";
-        echo "<table>";
-        echo "<tr><th>Name</th>";
-        echo "<th>Email</th>";
-	echo "<th>Company</th>";
-        echo "<th>Date</th></tr>";
-        foreach($registrants as $registrant) {
+    $patients = $stmt->fetchAll(); 
+    if(count($patients) > 0) {
+        foreach($patients as $patient) {
 			
-			$test = $registrant['Patient Name'];
+			$patientID = $patient['Patient ID'];
+			$patientName = $patient['Patient Name'];
+			$patientAge = $patient['Age'];
+			$medicalCondition = $patient['Medical Condition'];
+			$dateAdmitted = $patient['Date Admitted'];
 			
-			echo "<script> 
-			testing = '$test';
-			alert('hello');
-			patients.add( { patientID: '2651994780', patientName: testing, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
+			echo "<script>
+			
+			id = '$patientID';
+			name = '$patientName';
+			age = '$patientAge';
+			medicalCondition = '$medicalCondition';
+			dateAdmitted = '$dateAdmitted';
+			
+			patients.add( { patientID: id, patientName: name, patientAge:age, medicalCondition: medicalCondition, dateAdmitted: dateAdmitted } ); </script>";
 
-            echo "<tr><td>".$registrant['Patient Name']."</td>";
-            echo "<td>".$registrant['Age']."</td>";
-	    echo "<td>".$registrant['Medical Condition']."</td>";
-            echo "<td>".$registrant['Date Admitted']."</td></tr>";
         }
-        echo "</table>";
     } else {
-        echo "<h3>No one is currently registered.</h3>";
     }
 ?>
     
