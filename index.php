@@ -130,7 +130,7 @@
 			echo "<script> 
 			spge = '<?php echo $test ;?>';
 			alert(spge);
-			patients.add( { patientID: '2651994780', patientName: 'alert(spge);', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
+			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
 
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
