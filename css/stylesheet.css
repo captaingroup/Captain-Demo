@@ -18,14 +18,14 @@ body{
 	overflow:scroll;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #CCC;
+	background-color: #FFF;
 	-webkit-box-shadow: 0 0 25px rgba(0,0,0,.46);
 	-moz-box-shadow: 0 0 25px rgba(0,0,0,.46);
 	box-shadow: 0 0 25px rgba(0,0,0,.46);
 }
 
 .CAPHeaderBar {
-	background-color: #CCC;
+	background-color: #EBEBEB;
 	display: inline-block;
 	width: 100%;
 }
@@ -44,6 +44,7 @@ body{
 .CAPColumnHeadingsBar {
 	display: inline-block;
 	width: 100%;
+	background-color: #EBEBEB;
 }
 
 .CAPColumnTitle {
@@ -54,6 +55,7 @@ body{
 
 .CAPRows {
 	width: 100%;
+	background-color: #FFFFFF;
 }
 
 .list {
@@ -61,7 +63,7 @@ body{
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #EBEBEB;
+  background-color: #FFFFFF;
 }
 
 .listAlternate {
@@ -73,7 +75,6 @@ body{
 	background-color: #EBEBEB;
 }
 
-
 h3 {
   font-size: 16px;
   margin:0 0 0.3rem;
@@ -83,6 +84,18 @@ h3 {
 
 p {
   display:inline;
+}
+
+.patientID,
+.patientName,
+.patientAge,
+.medicalCondition,
+.dateAdmitted {
+	background-color: #FAFAFA;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 
 .patientID{
