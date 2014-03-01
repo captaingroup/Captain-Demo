@@ -189,4 +189,6 @@ input:focus {
 .panel:target{
 	margin-top: 0%;
 	background-color: #CCC;
+	width: 100%;
+	height: 100%;
 }
