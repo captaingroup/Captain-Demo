@@ -134,7 +134,7 @@
 			$test = $registrant['name'];
 			
 			echo "<script> 
-			spge = '<?php echo $test ;?>';
+			spge = <?php echo $test ;?>;
 			
 			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
 
