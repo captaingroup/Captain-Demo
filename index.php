@@ -95,6 +95,7 @@
     }
     catch(Exception $e){
         die(var_dump($e));
+		echo 'did not work';
     }
     // Insert registration info
     if(!empty($_POST)) {
