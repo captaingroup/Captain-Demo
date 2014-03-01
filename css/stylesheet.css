@@ -56,8 +56,6 @@ body{
 	width: 100%;
 }
 
-
-
 .list {
   font-family:sans-serif;
   width: 100%;
@@ -66,7 +64,7 @@ body{
 }
 
 .listAlternate {
-	background-color: #FFF
+	background-color: #FFF;
 }
 
 .list > li {
