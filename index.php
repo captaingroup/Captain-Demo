@@ -48,6 +48,7 @@
     		</ul>
     	</div>
 	</div>
+    
 
 	<script>
 	var options = {
@@ -59,6 +60,11 @@
 	patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
 
 	</script>
+    
+    <script> 
+			spge = "hello";
+			
+			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>
 
 	<script>
 	$(document).ready(function(){
@@ -128,9 +134,9 @@
 			$test = $registrant['name'];
 			
 			echo "<script> 
-			var spge = '<?php echo $test ;?>';
+			spge = '<?php echo $test ;?>';
 			
-			patients.add( { patientID: '2651994780', patientName: document.write(spge), patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
+			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
 
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
