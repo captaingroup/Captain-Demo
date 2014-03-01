@@ -18,14 +18,14 @@ body{
 	overflow:scroll;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #ebebeb;
+	background-color: #CCC;
 	-webkit-box-shadow: 0 0 25px rgba(0,0,0,.46);
 	-moz-box-shadow: 0 0 25px rgba(0,0,0,.46);
 	box-shadow: 0 0 25px rgba(0,0,0,.46);
 }
 
 .CAPHeaderBar {
-	background-color: #999;
+	background-color: #CCC;
 	display: inline-block;
 	width: 100%;
 }
@@ -61,6 +61,7 @@ body{
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: #EBEBEB;
 }
 
 .listAlternate {
@@ -69,6 +70,7 @@ body{
 
 .list > li {
 	list-style-type: none;
+	background-color: #EBEBEB;
 }
 
 
