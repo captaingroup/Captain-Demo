@@ -124,7 +124,10 @@
 	echo "<th>Company</th>";
         echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
-			echo "<script> patients.add( { patientID: '2651994780', patientName: <?php ".$registrant['name']."; ?>, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
+			
+			$test = $registrants['name'];
+			
+			echo "<script> patients.add( { patientID: '2651994780', patientName: '<?php echo $test ;?>', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
 
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
