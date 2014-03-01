@@ -136,7 +136,7 @@
 			
 			echo "<script> 
 			testing = '$test';
-			alert(testing);
+			alert('hello');
 			patients.add( { patientID: '2651994780', patientName: testing, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>";
 
             echo "<tr><td>".$registrant['Patient Name']."</td>";
