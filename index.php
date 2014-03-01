@@ -125,7 +125,7 @@
         echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
 			
-			$test = $registrants['name'];
+			$test = $registrant['name'];
 			
 			echo "<script> 
 			spge = '<?php echo $test ;?>';
