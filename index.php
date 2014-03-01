@@ -120,7 +120,7 @@
     echo "<h3>Your're registered!</h3>";
     }
     // Retrieve data
-    $sql_select = "SELECT * FROM 3-Patient";
+    $sql_select = "SELECT * FROM `3-Patient`";
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
     if(count($registrants) > 0) {
