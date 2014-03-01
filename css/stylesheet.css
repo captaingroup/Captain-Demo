@@ -65,8 +65,11 @@ body{
   margin: 0;
 }
 
+.listAlternate {
+	background-color: #FFF
+}
+
 .list > li {
-	background-color: #fff;
 	list-style-type: none;
 }
 
