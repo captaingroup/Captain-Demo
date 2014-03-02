@@ -8,6 +8,7 @@
 <body>
 
 	<?php
+		$patientID = $_GET["id"] ;
 		echo "<h1>Hello " . $_GET["id"] . "</h1>";
 		
 		// DB connection info
@@ -28,19 +29,22 @@
     }
     
     // Retrieve data
-    $sql_select = "SELECT * FROM `3-Patient`";
+    $sql_select = "SELECT * FROM `3-Patient` WHERE `Patient ID` = " .$patientID;
     $stmt = $conn->query($sql_select);
     $patients = $stmt->fetchAll(); 
     if(count($patients) > 0) {
         foreach($patients as $patient) {
 			
-			$patientID = $patient['Patient ID'];
 			$patientName = $patient['Patient Name'];
 			$patientAge = $patient['Age'];
 			$medicalCondition = $patient['Medical Condition'];
 			$dateAdmitted = $patient['Date Admitted'];
 			
 			echo $patientID;
+			echo $patientName;
+			echo $patientAge;
+			echo $medicalCondition;
+			echo $dateAdmitted;
 			
         }
     } else {
