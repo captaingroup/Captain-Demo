@@ -52,11 +52,6 @@
 
 	</script>
     
-    <script> 
-			spge = "hello";
-			
-			patients.add( { patientID: '2651994780', patientName: spge, patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } ); </script>
-
 	<script>
 	$(document).ready(function(){
   		$('#list li:nth-child(odd)').addClass('listAlternate');
