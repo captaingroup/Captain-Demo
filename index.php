@@ -31,8 +31,8 @@
 
 		<div class="CAPRows">
     		<ul id="list" class="list">
-       			<li id="hey">
-           			<p class="patientID">0123456789</p>
+       			<li>
+           			<p id="patientID" class="patientID">0123456789</p>
            			<p class="patientName">Jonny Walthstow</p>
            			<p class="patientAge">25</p>
            			<p class="medicalCondition">Atherosclerosis</p>
@@ -127,8 +127,9 @@
     var ul = document.getElementById('list');
     ul.onclick = function(event) {
         var target = getEventTarget(event);
-        alert(target.innerHTML);
-    };</script>
+		var variable = event.target.parentNode.childNodes;
+		alert(variable[1].textContent);
+	};</script>
 
 </section>
 
