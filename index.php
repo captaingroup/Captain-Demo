@@ -30,7 +30,7 @@
     	</div>
 
 		<div class="CAPRows">
-    		<ul id="lsit" class="list">
+    		<ul id="list" class="list">
        			<li id="hey">
            			<p class="patientID">0123456789</p>
            			<p class="patientName">Jonny Walthstow</p>
