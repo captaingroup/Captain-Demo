@@ -49,6 +49,24 @@
         }
     } else {
     }
+	$active = 1;
+	while($active = 1){
+		$result = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." ORDER BY `Time Stamp` DESC LIMIT 1;"; 
+		$stmt = $conn->query($result);
+    	$readings = $stmt->fetchAll();
+		
+		if(count($readings) > 0) {
+			foreach($readings as $reading) {
+				$sensorName = $reading['Device Name'];
+				$sensorReading = $reading['Reading'];
+				
+				echo $sensorName. " " .$sensorReading;	
+			}
+		}
+		
+	}
+	
+	
 	?>
 
 </body>
