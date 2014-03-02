@@ -118,17 +118,17 @@
     }
 ?>
     
-    <script type="text/javascript">
-    // locate your element and add the Click Event Listener
-    document.getElementById("list").addEventListener("click",function(e) {
-        // e.target is our targetted element.
-                    // try doing console.log(e.target.nodeName), it will result LI
-        if(e.target && e.target.nodeName == "LI") {
-            console.log(e.target.id + " was clicked");
-        }
-    });
-</script>
+<script>
+	function getEventTarget(e) {
+        e = e || window.event;
+        return e.target || e.srcElement; 
+    }
 
+    var ul = document.getElementById('list');
+    ul.onclick = function(event) {
+        var target = getEventTarget(event);
+        alert(target.innerHTML);
+    };</script>
 
 </section>
 
