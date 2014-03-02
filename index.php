@@ -129,6 +129,7 @@
         var target = getEventTarget(event);
 		var variable = event.target.parentNode.childNodes;
 		alert(variable[1].textContent);
+		window.location.href = "patient.php?id="+variable[1].textContent;
 	};</script>
 
 </section>
