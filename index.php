@@ -38,13 +38,6 @@
            			<p class="medicalCondition">Atherosclerosis</p>
            			<p class="dateAdmitted">01/01/14</p>
        			</li>
-       			<li>
-           			<p class="patientID">1234567890</p>
-           			<p class="patientName">Jamie Berlin</p>
-           			<p class="patientAge">22</p>
-           			<p class="medicalCondition">Atherosclerosis</p>
-           			<p class="dateAdmitted">01/01/13</p>
-       			</li>
     		</ul>
     	</div>
 	</div>
@@ -56,8 +49,6 @@
 	};
 
 	var patients = new List('patients', options);
-	patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
-	patients.add( { patientID: '2651994780', patientName: 'Aditya Gandhi', patientAge:'19', medicalCondition: 'Atherosclerosis', dateAdmitted: '26/05/1994' } );
 
 	</script>
     
