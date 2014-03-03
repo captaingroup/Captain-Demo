@@ -48,7 +48,7 @@
 
 <body>
 
-<ul id="comment"></ul>
+<ul id="comment" style="color: #000"><h3>hello</h3></ul>
 
 
 </body>
