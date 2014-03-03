@@ -68,7 +68,7 @@
 	?>
 //-->
 
-<div id="div_displaying_total" class="div_displaying_total"></div>
+<div id="div_displaying_total" class="div_displaying_total"><h3> hello </h3></div>
 
 <script>
 var updateTotal = function () {
