@@ -71,11 +71,11 @@ $Result = mysql_query("SELECT `Reading` FROM `4-Sensors` WHERE `Patient ID` = 00
 //get all records from add_delete_record table
 while($row = mysql_fetch_array($Result))
 {
-  echo '<li id="item_'.$row["id"].'">';
-  echo '<div class="del_wrapper"><a href="#" class="del_button" id="del-'.$row["id"].'">';
+  echo '<li id="item_'.$row['Reading'].'">';
+  echo '<div class="del_wrapper"><a href="#" class="del_button" id="del-'.$row['Reading'].'">';
   echo '<img src="images/icon_del.gif" border="0" />';
   echo '</a></div>';
-  echo $row["content"].'</li>';
+  echo $row['Reading'].'</li>';
 }
 
 //close db connection
