@@ -66,7 +66,7 @@ $(document).ready(function() {
 include_once("config.php");
 
 //MySQL query
-$Result = mysql_query("SELECT * FROM `3-Patient` WHERE `Patient ID` = 00000000");
+$Result = mysql_query("SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = 00000000 ORDER BY `Time Stamp` DESC LIMIT 1");
 
 //get all records from add_delete_record table
 while($row = mysql_fetch_array($Result))
