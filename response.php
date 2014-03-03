@@ -9,7 +9,7 @@ if(isset($_POST["content_txt"]) && strlen($_POST["content_txt"])>0)
 	$contentToSave = filter_var($_POST["content_txt"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH); 
 	
 	// Insert sanitize string in record
-	if(mysql_query("INSERT INTO add_delete_record(content) VALUES('".$contentToSave."')"))
+	if(mysql_query("INSERT INTO `4-Sensors` VALUES (002,00000000,'Heart Rate',78,20022014221848,0);"))
 	{
 		 //Record was successfully inserted, respond result back to index page
 		  $my_id = mysql_insert_id(); //Get ID of last inserted row from MySQL
