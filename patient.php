@@ -3,12 +3,54 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Patient</title>
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+       <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+        
+       <script type="text/javascript">
+               $(document).ready(function(){
+ 
+                    function showComment(){
+                      $.ajax({
+                        type:"post",
+                        url:"functions/getHeartRate.php",
+                        data:"action=showcomment",
+                        success:function(data){
+                             $("#comment").html(data);
+                        }
+                      });
+                    }
+ 
+                    showComment();
+ 
+ 
+                    $("#button").click(function(){
+ 
+                          var name=$("#name").val();
+                          var message=$("#message").val();
+ 
+                          $.ajax({
+                              type:"post",
+                              url:"process.php",
+                              data:"name="+name+"&message="+message+"&action=addcomment",
+                              success:function(data){
+                                showComment();
+                                  
+                              }
+ 
+                          });
+ 
+                    });
+               });
+       </script>
+
 </head>
 
 <body>
 
-<!--
-	<?php
+<ul id="comment"></ul>
+
+<!--	<?php
 	while (@ob_end_flush());
 		$patientID = $_GET["id"] ;
 		echo "<h1>Hello " . $_GET["id"] . "</h1>";
@@ -52,33 +94,27 @@
     } else {
     }
 	
-	$result = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." ORDER BY `Time Stamp` DESC LIMIT 1"; 
-	$stmt = $conn->query($result);
-    $readings = $stmt->fetchAll();
+	$active = 1;
+	while($active = 1){
+		$result = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." ORDER BY `Time Stamp` DESC LIMIT 1"; 
+		$stmt = $conn->query($result);
+    	$readings = $stmt->fetchAll();
 		
-	if(count($readings) > 0) {
-		foreach($readings as $reading) {
-			$sensorName = $reading['Device Name'];
-			$sensorReading = $reading['Reading'];
-			
-			echo $sensorName. " " .$sensorReading;	
-			return $sensorReading;
-		}	
+		if(count($readings) > 0) {
+			foreach($readings as $reading) {
+				$sensorName = $reading['Device Name'];
+				$sensorReading = $reading['Reading'];
+				
+				echo $sensorName. " " .$sensorReading;	
+			}
+		}
+		
 	}
+	
+	
 	?>
-//-->
+    
+    !-->
 
-<div id="div_displaying_total" class="div_displaying_total"><h3> hello </h3></div>
-
-<script>
-var updateTotal = function () {
-  $.get('functions/getHeartRate.php', function( data ){ // get new total
-    $('#div_displaying_total').val( data ); // paint a div with the new result
-  });
-};
-
-var running = setInterval( updateTotal, 5000 );
-
-</script>
 </body>
 </html>
