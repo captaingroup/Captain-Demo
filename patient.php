@@ -37,6 +37,6 @@ $(document).ready(function(){
 		echo "<h1>Hello " . $_GET["id"] . "</h1>";
 ?>
 
-<div class="refreshMe">This will get Refreshed in 10 Seconds</div>
+<div class="refreshMe">Heart Rate</div>
 </body>
 </html>
