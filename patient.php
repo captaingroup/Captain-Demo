@@ -32,6 +32,11 @@ $(document).ready(function(){
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<?php
+		$patientID = $_GET["id"] ;
+		echo "<h1>Hello " . $_GET["id"] . "</h1>";
+?>
+
 <div class="refreshMe">This will get Refreshed in 10 Seconds</div>
 </body>
 </html>
