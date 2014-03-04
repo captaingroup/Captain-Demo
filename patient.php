@@ -7,6 +7,12 @@
 <script language="javascript" src="jquery-1.2.6.min.js"></script>
 <script language="javascript" src="jquery.timers-1.0.0.js"></script>
 
+<?php
+		$patientID = $_GET["id"] ;
+		echo "<h1>Hello " . $_GET["id"] . "</h1>";
+?>
+
+
 <script type="text/javascript">
 
 $(document).ready(function(){
@@ -32,10 +38,6 @@ $(document).ready(function(){
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<?php
-		$patientID = $_GET["id"] ;
-		echo "<h1>Hello " . $_GET["id"] . "</h1>";
-?>
 
 <div class="refreshMe">Heart Rate</div>
 </body>
