@@ -17,7 +17,7 @@
     }
     include '../patient.php';
     // Retrieve data
-    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = 00000000 ORDER BY `Time Stamp` DESC LIMIT 1";
+    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = $patientID ORDER BY `Time Stamp` DESC LIMIT 1";
     $stmt = $conn->query($sql_select);
     $patients = $stmt->fetchAll(); 
     if(count($patients) > 0) {
@@ -25,7 +25,6 @@
 			
 			echo $patient['Device Name'];
 			echo $patient['Reading'];
-			echo $patientID;
         }
     } else {
     }
