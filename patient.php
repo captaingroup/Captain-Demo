@@ -15,7 +15,7 @@ $(document).ready(function(){
 	{
 		j(".refreshMe").everyTime(1000,function(i){
 			j.ajax({
-			  url: "refresh-me.php",
+			  url: "functions/getHeartRate.php",
 			  cache: false,
 			  success: function(html){
 				j(".refreshMe").html(html);

@@ -1,16 +1,31 @@
-<?php
-  mysql_connect("sql3.freemysqlhosting.net","sql331497","sI2*yG2*");
-  mysql_select_db("sql331497");
- 
-   
-  $action=$_POST["action"];
- 
-  if($action=="showcomment"){
-     $show=mysql_query("SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = 00000000 ORDER BY `Time Stamp` DESC LIMIT 1");
- 
-     while($row=mysql_fetch_array($show)){
-        echo "<li><b>$row[name]</b> : $row[message]</li>";
-     }
-  }
-  
-  
+    <?php
+    // DB connection info
+    //TODO: Update the values for $host, $user, $pwd, and $db
+    //using the values you retrieved earlier from the portal.
+    $host = "sql3.freemysqlhosting.net";
+    $user = "sql331497";
+    $pwd = "sI2*yG2*";
+    $db = "sql331497";
+    // Connect to database.
+    try {
+        $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    }
+    catch(Exception $e){
+        die(var_dump($e));
+		echo 'did not work';
+    }
+    
+    // Retrieve data
+    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = 00000000 ORDER BY `Time Stamp` DESC LIMIT 1";
+    $stmt = $conn->query($sql_select);
+    $patients = $stmt->fetchAll(); 
+    if(count($patients) > 0) {
+        foreach($patients as $patient) {
+			
+			echo $patient['Device Name'];
+			echo $patient['Reading'];
+        }
+    } else {
+    }
+?>
