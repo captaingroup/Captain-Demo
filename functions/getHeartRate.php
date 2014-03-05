@@ -19,13 +19,13 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." ORDER BY `Time Stamp` DESC LIMIT 1";
+    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." AND `Device Name` = 'Heart Rate' ORDER BY `Time Stamp` DESC LIMIT 1";
     $stmt = $conn->query($sql_select);
     $patients = $stmt->fetchAll(); 
     if(count($patients) > 0) {
         foreach($patients as $patient) {
 			
-			echo "<h6>".$patient['Device Name'].$patient['Reading']."</h6>";
+			echo "<h6>".$patient['Device Name']." ".$patient['Reading']."</h6>";
         }
     } else {
     }
