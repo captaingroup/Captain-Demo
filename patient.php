@@ -2,6 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ajax Add/Delete a Record with jQuery Fade In/Fade Out</title>
+<link href="css/stylesheet.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
 <script language="javascript" src="jquery-1.2.6.min.js"></script>
@@ -19,17 +20,17 @@ $(document).ready(function(){
    var j = jQuery.noConflict();
 	j(document).ready(function()
 	{
-		j(".refreshMe").everyTime(1000,function(i){
+		j(".heartRateData").everyTime(1000,function(i){
 			j.ajax({
 			  url: "functions/getHeartRate.php?id=<?php echo $patientID;?>",
 			  cache: false,
 			  success: function(html){
-				j(".refreshMe").html(html);
+				j(".heartRateData").html(html);
 			  }
 			})
 		})
 	});
-   j('.refreshMe').css({color:"red"});
+   j('.heartRateData').css({color:"red"});
 });
 
 
@@ -39,6 +40,18 @@ $(document).ready(function(){
 </head>
 <body>
 
-<div class="refreshMe"></div>
+<div class="dataContainer">
+	<div class="patientLiveDataContainer">
+    	<div class="ecgGraphData"></div>
+        <div class="otherDataContainer">
+        	<div class="heartRateData"></div>
+            <div class="bloodPressureData"></div>
+            <div class="oxygenSaturationData"></div>
+            <div class="waterContentData"></div>
+        </div>
+    </div>
+    <div class="otherPatientDataContainer"></div>
+</div>
+
 </body>
 </html>
