@@ -279,6 +279,7 @@ input:focus {
 	float: left;
 	width: 70%;
 	font-size:16px;
+	height: 100%;
 }
 
 .otherPatientDataContainer {
