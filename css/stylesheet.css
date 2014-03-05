@@ -227,7 +227,6 @@ input:focus {
 	width: 30%;
 	font-size: 24px;
 	float: right;
-	height: 100%;
 }
 
 .bloodPressureData {
@@ -242,7 +241,6 @@ input:focus {
 	width: 30%;
 	font-size: 24px;
 	float: right;
-	height: 100%;
 }
 
 .oxygenSaturationData {
@@ -257,7 +255,6 @@ input:focus {
 	width: 30%;
 	font-size: 24px;
 	float: right;
-	height: 100%;
 }
 
 .waterContentData {
@@ -272,7 +269,6 @@ input:focus {
 	width: 30%;
 	font-size: 24px;
 	float: right;
-	height: 100%;
 }
 
 .liveDataTitle {
