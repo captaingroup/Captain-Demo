@@ -220,13 +220,6 @@ input:focus {
 	height: 20%;
 	background-color: #E9E9E9;
 	text-align: center;
-	display: inline-block;
-}
-
-.heartRateDataContent {
-	width: 30%;
-	font-size: 24px;
-	float: right;
 }
 
 .bloodPressureData {
@@ -234,13 +227,6 @@ input:focus {
 	height: 20%;
 	background-color: #E9E9E9;
 	text-align: center;
-	display: inline-block;
-}
-
-.bloodPressureDataContent {
-	width: 30%;
-	font-size: 24px;
-	float: right;
 }
 
 .oxygenSaturationData {
@@ -248,13 +234,6 @@ input:focus {
 	height: 20%;
 	background-color: #E9E9E9;
 	text-align: center;
-	display: inline-block;
-}
-
-.oxygenSaturationDataContent {
-	width: 30%;
-	font-size: 24px;
-	float: right;
 }
 
 .waterContentData {
@@ -262,19 +241,6 @@ input:focus {
 	height: 20%;
 	background-color: #E9E9E9;
 	text-align: center;
-	display: inline-block;
-}
-
-.waterContentDataContent {
-	width: 30%;
-	font-size: 24px;
-	float: right;
-}
-
-.liveDataTitle {
-	float: left;
-	width: 70%;
-	font-size:16px;
 }
 
 .otherPatientDataContainer {
