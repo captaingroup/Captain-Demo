@@ -21,7 +21,7 @@ $(document).ready(function(){
 	{
 		j(".refreshMe").everyTime(1000,function(i){
 			j.ajax({
-			  url: "functions/getHeartRate.php?id="<?php echo $patientID;?>,
+			  url: "functions/getHeartRate.php?id=<?php echo $patientID;?>",
 			  cache: false,
 			  success: function(html){
 				j(".refreshMe").html(html);
