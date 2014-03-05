@@ -20,62 +20,62 @@ $(document).ready(function(){
    var j = jQuery.noConflict();
 	j(document).ready(function()
 	{
-		j(".heartRateData").everyTime(1000,function(i){
+		j(".heartRateDataContent").everyTime(1000,function(i){
 			j.ajax({
 			  url: "functions/getHeartRate.php?id=<?php echo $patientID;?>",
 			  cache: false,
 			  success: function(html){
-				j(".heartRateData").html(html);
+				j(".heartRateDataContent").html(html);
 			  }
 			})
 		})
 	});
-   j('.heartRateData').css({color:"red"});
+   j('.heartRateDataContent').css({color:"red"});
    
    var a = jQuery.noConflict();
 	a(document).ready(function()
 	{
-		a(".bloodPressureData").everyTime(1000,function(i){
+		a(".bloodPressureDataContent").everyTime(1000,function(i){
 			a.ajax({
 			  url: "functions/getBloodPressure.php?id=<?php echo $patientID;?>",
 			  cache: false,
 			  success: function(html){
-				a(".bloodPressureData").html(html);
+				a(".bloodPressureDataContent").html(html);
 			  }
 			})
 		})
 	});
-   a('.bloodPressureData').css({color:"red"});
+   a('.bloodPressureDataContent').css({color:"red"});
    
    var b = jQuery.noConflict();
 	b(document).ready(function()
 	{
-		b(".oxygenSaturationData").everyTime(1000,function(i){
+		b(".oxygenSaturationDataContent").everyTime(1000,function(i){
 			b.ajax({
 			  url: "functions/getOxygenSaturation.php?id=<?php echo $patientID;?>",
 			  cache: false,
 			  success: function(html){
-				b(".oxygenSaturationData").html(html);
+				b(".oxygenSaturationDataContent").html(html);
 			  }
 			})
 		})
 	});
-   b('.oxygenSaturationData').css({color:"red"});
+   b('.oxygenSaturationDataContent').css({color:"red"});
    
    var c = jQuery.noConflict();
 	c(document).ready(function()
 	{
-		c(".waterContentData").everyTime(60000,function(i){
+		c(".waterContentDataContent").everyTime(60000,function(i){
 			c.ajax({
 			  url: "functions/getWaterContent.php?id=<?php echo $patientID;?>",
 			  cache: false,
 			  success: function(html){
-				c(".waterContentData").html(html);
+				c(".waterContentDataContent").html(html);
 			  }
 			})
 		})
 	});
-   c('.waterContentData').css({color:"red"});
+   c('.waterContentDataContent').css({color:"red"});
 });
 
 
@@ -89,10 +89,22 @@ $(document).ready(function(){
 	<div class="patientLiveDataContainer">
     	<div class="ecgGraphData"><h6>hi</h6></div>
         <div class="otherDataContainer">
-        	<div class="heartRateData"></div>
-            <div class="bloodPressureData"></div>
-            <div class="oxygenSaturationData"></div>
-            <div class="waterContentData"></div>
+        	<div class="heartRateData">
+            	<div class="liveDataTitle"><h6>Heart Rate</h6></div>
+                <div class="heartRateDataContent"></div>
+            </div>
+            <div class="bloodPressureData">
+            	<div class="liveDataTitle"><h6>Blood Pressure</h6></div>
+                <div class="bloodPressureDataContent"></div>
+            </div>
+            <div class="oxygenSaturationData">
+            	<div class="liveDataTitle"><h6>Oxygen Saturation</h6></div>
+                <div class="oxygenSaturationDataContent"></div>
+            </div>
+            <div class="waterContentData">
+            	<div class="liveDataTitle"><h6>Water Content</h6></div>
+                <div class="waterContentDataContent"></div>
+            </div>
         </div>
     </div>
     <div class="otherPatientDataContainer"><h6>hi</h6></div>
