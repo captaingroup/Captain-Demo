@@ -219,24 +219,28 @@ input:focus {
 	width: 100%;
 	height: 20%;
 	background-color: #E9E9E9;
+	text-align: center;
 }
 
 .bloodPressureData {
 	width: 100%;
 	height: 20%;
 	background-color: #E9E9E9;
+	text-align: center;
 }
 
 .oxygenSaturationData {
 	width: 100%;
 	height: 20%;
 	background-color: #E9E9E9;
+	text-align: center;
 }
 
 .waterContentData {
 	width: 100%;
 	height: 20%;
 	background-color: #E9E9E9;
+	text-align: center;
 }
 
 .otherPatientDataContainer {
