@@ -42,15 +42,15 @@ $(document).ready(function(){
 
 <div class="dataContainer">
 	<div class="patientLiveDataContainer">
-    	<div class="ecgGraphData"></div>
+    	<div class="ecgGraphData"><h6>hi</h6></div>
         <div class="otherDataContainer">
         	<div class="heartRateData"></div>
-            <div class="bloodPressureData"></div>
-            <div class="oxygenSaturationData"></div>
-            <div class="waterContentData"></div>
+            <div class="bloodPressureData"><h6>hi</h6></div>
+            <div class="oxygenSaturationData"><h6>hi</h6></div>
+            <div class="waterContentData"><h6>hi</h6></div>
         </div>
     </div>
-    <div class="otherPatientDataContainer"></div>
+    <div class="otherPatientDataContainer"><h6>hi</h6></div>
 </div>
 
 </body>
