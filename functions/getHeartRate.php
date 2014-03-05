@@ -27,7 +27,7 @@
 			
 			echo $patient['Device Name'];
 			echo $patient['Reading'];
-			echo $patientID;
+			echo "<h6>".$patientID."</h6>";
         }
     } else {
     }
