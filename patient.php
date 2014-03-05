@@ -30,7 +30,7 @@ $(document).ready(function(){
 			})
 		})
 	});
-   j('.heartRateData').css({color:"red"});
+   j('.heartRateData').css({color:"black"});
    
    var a = jQuery.noConflict();
 	a(document).ready(function()
@@ -45,7 +45,7 @@ $(document).ready(function(){
 			})
 		})
 	});
-   a('.bloodPressureData').css({color:"red"});
+   a('.bloodPressureData').css({color:"black"});
    
    var b = jQuery.noConflict();
 	b(document).ready(function()
@@ -60,7 +60,7 @@ $(document).ready(function(){
 			})
 		})
 	});
-   b('.oxygenSaturationData').css({color:"red"});
+   b('.oxygenSaturationData').css({color:"black"});
    
    var c = jQuery.noConflict();
 	c(document).ready(function()
@@ -75,7 +75,7 @@ $(document).ready(function(){
 			})
 		})
 	});
-   c('.waterContentData').css({color:"red"});
+   c('.waterContentData').css({color:"black"});
 });
 
 
