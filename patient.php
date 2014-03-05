@@ -46,6 +46,36 @@ $(document).ready(function(){
 		})
 	});
    a('.bloodPressureData').css({color:"red"});
+   
+   var b = jQuery.noConflict();
+	b(document).ready(function()
+	{
+		b(".oxygenSaturationData").everyTime(1000,function(i){
+			b.ajax({
+			  url: "functions/getOxygenSaturation.php?id=<?php echo $patientID;?>",
+			  cache: false,
+			  success: function(html){
+				b(".oxygenSaturationData").html(html);
+			  }
+			})
+		})
+	});
+   b('.oxygenSaturationData').css({color:"red"});
+   
+   var c = jQuery.noConflict();
+	c(document).ready(function()
+	{
+		c(".waterContentData").everyTime(60000,function(i){
+			c.ajax({
+			  url: "functions/getWaterContent.php?id=<?php echo $patientID;?>",
+			  cache: false,
+			  success: function(html){
+				c(".waterContentData").html(html);
+			  }
+			})
+		})
+	});
+   c('.waterContentData').css({color:"red"});
 });
 
 
@@ -61,8 +91,8 @@ $(document).ready(function(){
         <div class="otherDataContainer">
         	<div class="heartRateData"></div>
             <div class="bloodPressureData"></div>
-            <div class="oxygenSaturationData"><h6>hi</h6></div>
-            <div class="waterContentData"><h6>hi</h6></div>
+            <div class="oxygenSaturationData"></div>
+            <div class="waterContentData"></div>
         </div>
     </div>
     <div class="otherPatientDataContainer"><h6>hi</h6></div>
