@@ -25,9 +25,7 @@
     if(count($patients) > 0) {
         foreach($patients as $patient) {
 			
-			echo $patient['Device Name'];
-			echo $patient['Reading'];
-			echo "<h6>".$patientID."</h6>";
+			echo "<h6>".$patient['Device Name']."</h6><h5>".$patient['Reading']."</h5>";
         }
     } else {
     }
