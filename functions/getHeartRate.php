@@ -1,4 +1,6 @@
     <?php
+	$patientID = $_GET["id"] ;
+	/*
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
@@ -15,8 +17,6 @@
         die(var_dump($e));
 		echo 'did not work';
     }
-	
-	$patientID = $_GET["id"] ;
 		
     // Retrieve data
     $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." ORDER BY `Time Stamp` DESC LIMIT 1";
@@ -31,4 +31,6 @@
         }
     } else {
     }
+	*/
+	echo $patientID;
 ?>
