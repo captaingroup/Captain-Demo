@@ -20,52 +20,6 @@
 
 <script type="text/javascript">
 
-$(document).ready(function(){
-   var j = jQuery.noConflict();
-	j(document).ready(function()
-	{
-		j(".heartRateData").everyTime(1000,function(i){
-			j.ajax({
-			  url: "functions/getHeartRate.php?id=<?php echo $patientID;?>",
-			  cache: false,
-			  success: function(html){
-				j(".heartRateData").html(html);
-			  }
-			})
-		})
-	});
-   j('.heartRateData').css({color:"black"});
-   
-   var a = jQuery.noConflict();
-	a(document).ready(function()
-	{
-		a(".bloodPressureData").everyTime(1000,function(i){
-			a.ajax({
-			  url: "functions/getBloodPressure.php?id=<?php echo $patientID;?>",
-			  cache: false,
-			  success: function(html){
-				a(".bloodPressureData").html(html);
-			  }
-			})
-		})
-	});
-   a('.bloodPressureData').css({color:"black"});
-   
-   var b = jQuery.noConflict();
-	b(document).ready(function()
-	{
-		b(".oxygenSaturationData").everyTime(1000,function(i){
-			b.ajax({
-			  url: "functions/getOxygenSaturation.php?id=<?php echo $patientID;?>",
-			  cache: false,
-			  success: function(html){
-				b(".oxygenSaturationData").html(html);
-			  }
-			})
-		})
-	});
-   b('.oxygenSaturationData').css({color:"black"});
-   
    var c = jQuery.noConflict();
 	c(document).ready(function()
 	{
@@ -180,7 +134,6 @@ $(document).ready(function(){
 
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 <script>
-$(function () {
     $(document).ready(function() {
         Highcharts.setOptions({
             global: {
@@ -252,8 +205,6 @@ $(function () {
             }]
         });
     });
-    
-});
 </script>
 
 </body>
