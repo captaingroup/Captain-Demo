@@ -7,7 +7,7 @@
 
 <script language="javascript" src="jquery-1.2.6.min.js"></script>
 <script language="javascript" src="jquery.timers-1.0.0.js"></script>
-<script src="Chart.js"></script>
+<script src="javascript\Chart.js"></script>
 
 <?php
 		$patientID = $_GET["id"] ;
