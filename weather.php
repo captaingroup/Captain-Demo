@@ -121,7 +121,19 @@ $(document).ready(function(){
     labels.shift();
     count++;
     labels.push(count.toString());
-    var newDataA = dataSetA[9] + (20 - Math.floor(Math.random() * (41)));
+    var newDataA = dataSetA[9] + var a = jQuery.noConflict();
+	a(document).ready(function()
+	{
+		a(".bloodPressureData").everyTime(1000,function(i){
+			a.ajax({
+			  url: "functions/getBloodPressure.php?id=<?php echo $patientID;?>",
+			  cache: false,
+			  success: function(html){
+				a(".bloodPressureData").html(html);
+			  }
+			})
+		})
+	});;
     var newDataB = dataSetB[9] + (20 - Math.floor(Math.random() * (41)));
     dataSetA.push(newDataA);
     dataSetB.push(newDataB);
