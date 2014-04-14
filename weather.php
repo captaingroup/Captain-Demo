@@ -23,6 +23,25 @@
 
 <script>
 
+	var chart;
+	
+	function requestData() {
+        $.ajax({
+            url: 'functions/getHeartRate.php?id=<?php echo $patientID;?>', 
+            success: function(point) {
+                var series = chart.series[0],
+                    shift = series.data.length > 20; // shift if the series is longer than 20
+
+                // add the point
+                chart.series[0].addPoint(eval(point), true, shift);
+
+                // call it again after one second
+                setTimeout(requestData, 1000);  
+            },
+            cache: false
+        });
+    }
+
     $(document).ready(function() {
         Highcharts.setOptions({
             global: {
@@ -30,7 +49,6 @@
             }
         });
     
-        var chart;
         chart = new Highcharts.Chart({
             chart: {
                 renderTo: 'container',
