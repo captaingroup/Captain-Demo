@@ -18,27 +18,6 @@
 ?>
 
 
-<script type="text/javascript">
-
-   var c = jQuery.noConflict();
-	c(document).ready(function()
-	{
-		c(".waterContentData").everyTime(60000,function(i){
-			c.ajax({
-			  url: "functions/getWaterContent.php?id=<?php echo $patientID;?>",
-			  cache: false,
-			  success: function(html){
-				c(".waterContentData").html(html);
-			  }
-			})
-		})
-	});
-   c('.waterContentData').css({color:"black"});
-});
-
-
-
-</script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -129,11 +108,9 @@ $(document).ready(function(){
 
 
 </script>	
-	
-	
 
-<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 <script>
+$(function () {
     $(document).ready(function() {
         Highcharts.setOptions({
             global: {
@@ -205,7 +182,13 @@ $(document).ready(function(){
             }]
         });
     });
+    
+});
 </script>
+	
+
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
 
 </body>
 </html>
