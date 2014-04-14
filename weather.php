@@ -5,8 +5,6 @@
 <link href="css/stylesheet.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
-<script language="javascript" src="jquery-1.2.6.min.js"></script>
-<script language="javascript" src="jquery.timers-1.0.0.js"></script>
 <script src="javascript/Chart.js"></script>
 
 <script src="http://code.highcharts.com/highcharts.js"></script>
