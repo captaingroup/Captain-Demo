@@ -22,10 +22,10 @@
     $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." AND `Device Name` = 'Heart Rate' ORDER BY `Time Stamp` DESC LIMIT 1";
     $stmt = $conn->query($sql_select);
     $patients = $stmt->fetchAll(); 
-    
-	
-	
-// Set the JSON header
+    if(count($patients) > 0) {
+        foreach($patients as $patient) {
+			
+			// Set the JSON header
 header("Content-type: text/json");
 
 // The x value is the current JavaScript time, which is the Unix time multiplied by 1000.
@@ -36,5 +36,11 @@ $y = $patient['Reading'] + 10;
 // Create a PHP array and echo it as JSON
 $ret = array($x, $y);
 echo json_encode($ret);
+
+        }
+    } else {
+    }
+	
+	
 
 ?>
