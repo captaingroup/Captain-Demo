@@ -123,18 +123,17 @@ $(document).ready(function(){
     labels.push(count.toString());
 	
 	var a = jQuery.noConflict();
-	a(document).ready(function()
-	{
-		a(".bloodPressureData").everyTime(1000,function(i){
-			a.ajax({
-			  url: "functions/getBloodPressure.php?id=<?php echo $patientID;?>",
-			  cache: false,
-			  success: function(html){
-				a(".bloodPressureData").html(html);
-			  }
-			})
+	
+	a(".bloodPressureData").everyTime(1000,function(i){
+		a.ajax({
+		  url: "functions/getBloodPressure.php?id=<?php echo $patientID;?>",
+		  cache: false,
+		  success: function(html){
+			a(".bloodPressureData").html(html);
+		  }
 		})
-	});
+	})
+	
 	
 	
     var newDataA = dataSetA[9] + a));
