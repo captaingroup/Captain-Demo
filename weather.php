@@ -127,7 +127,7 @@ $(document).ready(function(){
 	
 	
 	
-    var newDataA = dataSetA[9] + a));
+    var newDataA = dataSetA[9] + (20 - Math.floor(Math.random() * (41)));
     var newDataB = dataSetB[9] + (20 - Math.floor(Math.random() * (41)));
     dataSetA.push(newDataA);
     dataSetB.push(newDataB);
