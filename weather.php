@@ -110,7 +110,7 @@ $(document).ready(function(){
 </script>	
 
 <script>
-$(function () {
+
     $(document).ready(function() {
         Highcharts.setOptions({
             global: {
@@ -183,7 +183,7 @@ $(function () {
         });
     });
     
-});
+
 </script>
 	
 
