@@ -114,20 +114,69 @@ $(document).ready(function(){
 
 	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
 
+	
+	
+	var updateData = function(oldData){
+    var labels = oldData["labels"];
+    var dataSetA = oldData["datasets"][0]["data"];
+    var dataSetB = oldData["datasets"][1]["data"];
+    
+    labels.shift();
+    count++;
+    labels.push(count.toString());
+    var newDataA = dataSetA[9] + (20 - Math.floor(Math.random() * (41)));
+    var newDataB = dataSetB[9] + (20 - Math.floor(Math.random() * (41)));
+    dataSetA.push(newDataA);
+    dataSetB.push(newDataB);
+    dataSetA.shift();
+    dataSetB.shift();    };
+      
+  var optionsAnimation = {
+    //Boolean - If we want to override with a hard coded scale
+    scaleOverride : true,
+    //** Required if scaleOverride is true **
+    //Number - The number of steps in a hard coded scale
+    scaleSteps : 10,
+    //Number - The value jump in the hard coded scale
+    scaleStepWidth : 10,
+    //Number - The scale starting value
+    scaleStartValue : 0
+  }
+  
+  // Not sure why the scaleOverride isn't working...
+  var optionsNoAnimation = {
+    animation : false,
+    //Boolean - If we want to override with a hard coded scale
+    scaleOverride : true,
+    //** Required if scaleOverride is true **
+    //Number - The number of steps in a hard coded scale
+    scaleSteps : 20,
+    //Number - The value jump in the hard coded scale
+    scaleStepWidth : 10,
+    //Number - The scale starting value
+    scaleStartValue : 0
+  }
+  
+  //Get the context of the canvas element we want to select
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var optionsNoAnimation = {animation : false}
+  var myNewChart = new Chart(ctx);
+  myNewChart.Line(data, optionsAnimation);	
+  
+  setInterval(function(){
+    updateData(data);
+    myNewChart.Line(data, optionsNoAnimation)
+    ;}, 2000
+  );
+});
+
+	
+	
+	
+	
+
 	</script>
 
-<div class="dataContainer">
-	<div class="patientLiveDataContainer">
-    	<div class="ecgGraphData"></div>
-        <div class="otherDataContainer">
-        	<div class="heartRateData"></div>
-            <div class="bloodPressureData"></div>
-            <div class="oxygenSaturationData"></div>
-            <div class="waterContentData"></div>
-        </div>
-    </div>
-    <div class="otherPatientDataContainer"><h6>hi</h6></div>
-</div>
 
 </body>
 </html>
