@@ -9,7 +9,6 @@
 
 <?php
 		$patientID = $_GET["id"] ;
-		echo "<h1>Hello " . $_GET["id"] . "</h1>";
 ?>
 
 
