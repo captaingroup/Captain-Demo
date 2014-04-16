@@ -68,7 +68,7 @@
     });
 </script>
 	
-<div id="weatherHeader" class="weatherHeader"></div>
+<div id="weatherHeader" class="weatherHeader"><h5>Captain</h5></div>
 
 <div class="chartContainer">
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
