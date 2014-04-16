@@ -13,11 +13,22 @@ body{
 */
 
 .weatherHeader {
-	height: 40px;
+	height: auto;
 	width: 100%;
+	text-align: center;
 	padding: 0 auto;
 	margin: 0 auto;
 	background-color: #FFFFFF;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
+}
+
+.chartContainer {
+	height: auto;
+	width: 100%;
+	text-align: center;
+	padding: 0 auto;
+	margin: 0 auto;
+	background-color: #F5F5F5;
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
 }
 
