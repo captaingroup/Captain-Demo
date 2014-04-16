@@ -7,6 +7,19 @@ body{
 
 /**
 *
+* Weather Stylings
+* Includes Titles, Search Field, Column Headings and Column data styles
+*
+*/
+
+#weatherHeader {
+	height: 40px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+/**
+*
 * Currently Admitted Patients Stylings
 * Includes Titles, Search Field, Column Headings and Column data styles
 *
