@@ -30,7 +30,7 @@
                 chart.series[0].addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(requestData, 500);  
+                setTimeout(requestData, 1000);  
             },
             cache: false
         });
@@ -68,7 +68,7 @@
     });
 </script>
 	
-<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
+<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather</h6></div>
 
 <div class="chartContainer">
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
