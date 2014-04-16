@@ -69,7 +69,7 @@
     });
 </script>
 	
-<div id="weatherHeader"></div>
+<div id="weatherHeader" class="weatherHeader"></div>
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 
 
