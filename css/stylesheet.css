@@ -15,6 +15,8 @@ body{
 #weatherHeader {
 	height: 40px;
 	width: 100%;
+	padding: 0;
+	margin: 0;
 	background-color: #FFFFFF;
 	-moz-box-shadow: 0 0 6px rgba(0,0,0,.46); /* drop shadow */
 	-webkit-box-shadow: 0 0 6px rgba(0,0,0,.46); /* drop shadow */
