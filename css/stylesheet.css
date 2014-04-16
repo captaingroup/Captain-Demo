@@ -18,7 +18,7 @@ body{
 	height: auto;
 	width: 100%;
 	text-align: center;
-	padding: 0;
+	padding: 1px;
 	margin: 0;
 	background-color: #FFFFFF;
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
