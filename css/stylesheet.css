@@ -20,6 +20,8 @@ body{
 	margin: 0 auto;
 	background-color: #FFFFFF;
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
+	font-weight: bold;
+	font-family: bitter;
 }
 
 .chartContainer {
