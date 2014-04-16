@@ -45,7 +45,7 @@
                 }
             },
             title: {
-                text: 'Live random data'
+                text: 'Live Temperature Data'
             },
             xAxis: {
                 type: 'datetime',
