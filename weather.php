@@ -95,7 +95,7 @@
 		});	
 
 		var val = 0;
-		$(document).ready(function () {
+		$(document).ready(function requestData2() {
 				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 				
 				$.ajax({
@@ -103,7 +103,7 @@
             		success: function(point) {
             			gauge.value(val);
 						val = val + 1;    
-                		setTimeout(requestData, 1000);  
+                		setTimeout(requestData2, 1000);  
             		},
 					error: function (xhr, ajaxOptions, thrownError) {
         				alert(xhr.status);
