@@ -90,6 +90,9 @@
 				text: 'Wind-O-Meter',
 				font: { size: 28 }
 			},
+			tooltip: {
+				enabled: true
+			},
 			value: 2	
 			});
 		});	
