@@ -116,7 +116,7 @@
 	</div>
     
     <div class="linearGaugeContainer">
-        <div id="linearGaugeContainer"></div>
+        <div id="linearGaugeContainer" style=" background-color:#FBFBFB"></div>
 	</div>
 
     
