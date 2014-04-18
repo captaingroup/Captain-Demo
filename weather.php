@@ -77,13 +77,13 @@
    			$('#linearGaugeContainer').dxLinearGauge({
 			scale: {
 				startValue: 0,
-				endValue: 5,
+				endValue: 200,
 				majorTick: {
-					tickInterval: 2.5
+					tickInterval: 10
 				},
 				minorTick: {
 					visible: true,
-					tickInterval: 0.625
+					tickInterval: 2
 				}
 			},
 			title: {
