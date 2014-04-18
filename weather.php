@@ -105,10 +105,6 @@
 						val = val + 1;
                 		setTimeout(requestData2, 1000);  
             		},
-					error: function (xhr, ajaxOptions, thrownError) {
-        				alert(xhr.status);
-        				alert(thrownError);
-      				},
             		cache: false
         			});
 		});	
@@ -117,7 +113,7 @@
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-        <div id="linearGaugeContainer" class="case-container" style="width: 100%; height: 440px; background-color:#FBFBFB"></div>
+        <div id="linearGaugeContainer" style=" background-color:#FBFBFB"></div>
 	</div>
     
 
