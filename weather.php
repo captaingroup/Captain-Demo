@@ -112,6 +112,7 @@
                 	color: '#EE2C2C'
             	}
         	]},
+			valueIndicator: { color: '#8E388E', offset: 10 },
 			value: 2	
 			});
 		});	
