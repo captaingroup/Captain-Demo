@@ -106,7 +106,7 @@
         			},
 					dataType: "JSON",
             		success: function(point) {
-            			gauge.value(eval(var1));
+            			gauge.value(val);
 						val = val + 1;
                 		setTimeout(requestData2, 1000);  
             		},
