@@ -35,7 +35,7 @@ $y = $patient['Reading']+0;
 
 // Create a PHP array and echo it as JSON
 $ret = array($x, $y);
-echo json_encode($ret);
+echo json_encode($y);
 
         }
     } else {
