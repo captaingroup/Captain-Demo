@@ -87,7 +87,7 @@
 				}
 			},
 			title: {
-				text: 'TV Show Rating',
+				text: 'Wind-O-Meter',
 				font: { size: 28 }
 			},
 			value: 2	
@@ -101,7 +101,7 @@
 				$.ajax({
             		url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
             		success: function(point) {
-            			gauge.value(1);    
+            			gauge.value(eval(point));    
                 		setTimeout(requestData, 1000);  
             		},
 					error: function (xhr, ajaxOptions, thrownError) {
