@@ -97,11 +97,12 @@
 		
 		$(document).ready(function () {
 				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
-		
+				var val = 0;
 				$.ajax({
             		url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
             		success: function(point) {
-            			gauge.value(eval(point));    
+            			gauge.value(val);
+						val = val + 1;    
                 		setTimeout(requestData, 1000);  
             		},
 					error: function (xhr, ajaxOptions, thrownError) {
