@@ -94,10 +94,10 @@
 			});
 		});	
 
-		
+		var val = 0;
 		$(document).ready(function () {
 				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
-				var val = 0;
+				
 				$.ajax({
             		url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
             		success: function(point) {
