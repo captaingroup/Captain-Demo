@@ -110,7 +110,6 @@
       				},
             		cache: false
         			});
-				gauge.value(5);
 		});	
 	</script>
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather</h6></div>
