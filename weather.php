@@ -117,12 +117,9 @@
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+        <div id="linearGaugeContainer" class="case-container" style="width: 100%; height: 440px; background-color:#FBFBFB"></div>
 	</div>
     
-    <div class="chartContainer">
-        <div id="linearGaugeContainer" style="width: 100%; height: 440px;"></div>
-
-	</div>
 
 </body>
 </html>
