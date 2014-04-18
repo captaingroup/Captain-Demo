@@ -102,7 +102,8 @@
             		url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
             		success: function(point) {
             			gauge.value(val);
-						val = val + 1;    
+						val = val + 1;
+						alert(eval(point));    
                 		setTimeout(requestData2, 1000);  
             		},
 					error: function (xhr, ajaxOptions, thrownError) {
