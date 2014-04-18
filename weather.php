@@ -99,12 +99,7 @@
 				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 				
 				$.ajax({
-					type: "POST",
             		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
-					data:{
-        				'POST1':var1
-        			},
-					dataType: "JSON",
             		success: function(point) {
             			gauge.value(val);
 						val = val + 1;
