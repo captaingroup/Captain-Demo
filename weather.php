@@ -77,7 +77,7 @@
    			$('#linearGaugeContainer').dxLinearGauge({
 			scale: {
 				startValue: 0,
-				endValue: 200,
+				endValue: 150,
 				majorTick: {
 					tickInterval: 10
 				},
@@ -102,6 +102,14 @@
                 	startValue: 30,
                 	endValue: 80,
                 	color: '#EEC900'
+            	}, {
+                	startValue: 80,
+                	endValue: 120,
+                	color: '#FF9912'
+            	}, {
+                	startValue: 120,
+                	endValue: 200,
+                	color: '#EE2C2C'
             	}
         	]},
 			value: 2	
