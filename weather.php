@@ -93,6 +93,17 @@
 			tooltip: {
 				enabled: true
 			},
+			rangeContainer: {
+        		ranges: [{
+                	startValue: 0,
+                	endValue: 30,
+                	color: 'blue'
+            	}, {
+                	startValue: 30,
+                	endValue: 80,
+                	color: 'red'
+            	}
+        	]},
 			value: 2	
 			});
 		});	
