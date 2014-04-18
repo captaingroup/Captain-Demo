@@ -97,7 +97,7 @@
         		ranges: [{
                 	startValue: 0,
                 	endValue: 30,
-                	color: 'blue'
+                	color: '#000'
             	}, {
                 	startValue: 30,
                 	endValue: 80,
