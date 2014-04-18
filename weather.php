@@ -104,8 +104,9 @@
 					data:{
         				'POST1':var1
         			},
+					dataType: "JSON",
             		success: function(point) {
-            			gauge.value(var1);
+            			gauge.value(eval(var1));
 						val = val + 1;
                 		setTimeout(requestData2, 1000);  
             		},
