@@ -111,7 +111,7 @@
                 		setTimeout(requestData2, 1000);  
             		},
 					error: function (xhr, ajaxOptions, thrownError) {
-        				alert("Error : "+ xhr.status);
+        				alert(xhr.status);
         				alert(thrownError);
       				},
             		cache: false
