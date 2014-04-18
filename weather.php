@@ -6,6 +6,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="../../../js/jquery-1.10.2.min.js"></script>
+<script src="../../../js/globalize.min.js"></script>
+<script src="../../../js/dx.chartjs.js"></script>
 
 <?php
 		$patientID = $_GET["id"] ;
@@ -68,11 +71,55 @@
     });
 </script>
 	
-<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather</h6></div>
+    
+	<script>			
+		$(function (){
+   			$('#linearGaugeContainer').dxLinearGauge({
+			scale: {
+				startValue: 0,
+				endValue: 5,
+				majorTick: {
+					tickInterval: 2.5
+				},
+				minorTick: {
+					visible: true,
+					tickInterval: 0.625
+				}
+			},
+			title: {
+				text: 'TV Show Rating',
+				font: { size: 28 }
+			},
+			value: 2	
+			});
+		});	
 
-<div class="chartContainer">
-<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-</div>
+		
+		$(document).ready(function () {
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+		
+				$.ajax({
+            		url: 'live-server-data.php?id=00000000', 
+            		success: function(point) {
+            			gauge.value(5);    
+                		setTimeout(requestData, 1000);  
+            		},
+					error: function (xhr, ajaxOptions, thrownError) {
+        				alert(xhr.status);
+        				alert(thrownError);
+      				},
+            		cache: false
+        			});
+				gauge.value(5);
+		});	
+	</script>
+	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather</h6></div>
+
+	<div class="chartContainer">
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+        				<div id="linearGaugeContainer" class="case-container" style="width: 100%; height: 440px;"></div>
+
+	</div>
 
 </body>
 </html>
