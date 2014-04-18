@@ -40,6 +40,17 @@ body{
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
 }
 
+.linearGaugeContainer {
+	height: auto;
+	width: 100%;
+	text-align: center;
+	padding: 0 auto;
+	margin: 0 auto;
+	background-color: #EDEDED;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
+}
+
+
 /**
 *
 * Currently Admitted Patients Stylings
