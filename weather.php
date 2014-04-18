@@ -101,7 +101,7 @@
 				$.ajax({
             		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
             		success: function(point) {
-            			gauge.value(val);
+            			gauge.value(point);
 						val = val + 1;
                 		setTimeout(requestData2, 1000);  
             		},
