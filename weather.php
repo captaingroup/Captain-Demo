@@ -101,11 +101,15 @@
 				$.ajax({
             		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 					
             		success: function(point) {
-            			//gauge.value(eval(point));
-						alert(point);
+            			gauge.value(eval(point));
+						window.alert(eval(point));
 						val = val + 1;
                 		setTimeout(requestData2, 1000);  
             		},
+					error: function (xhr, ajaxOptions, thrownError) {
+        				alert(xhr.status);
+        				alert(thrownError);
+      				},
             		cache: false
         			});
 		});	
