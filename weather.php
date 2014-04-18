@@ -106,10 +106,6 @@
 						val = val + 1;
                 		setTimeout(requestData2, 1000);  
             		},
-					error: function (xhr, ajaxOptions, thrownError) {
-        				alert(xhr.status);
-        				alert(thrownError);
-      				},
             		cache: false
         			});
 		});	
