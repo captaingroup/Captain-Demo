@@ -132,7 +132,7 @@
         			});
 		});	
 	</script>
-	<div id="weatherHeader" class="weatherHeader"><p class="weatherHeaderText">Captain - Weather</p></div>
+	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather</h6></div>
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>

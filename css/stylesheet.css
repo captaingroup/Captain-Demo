@@ -25,7 +25,9 @@ body{
 }
 
 .weatherHeaderText {
-	font-size: 28px;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
 }
 
 .chartContainer {
