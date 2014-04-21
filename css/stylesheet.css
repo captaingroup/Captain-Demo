@@ -1,6 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+font-family: 'Nova Slim', cursive;
+font-family: 'Parisienne', cursive;
+font-family: 'Nova Mono', ;
+font-family: 'Pacifico', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Varela Round', sans-serif;
+font-family: 'Dr Sugiyama', cursive;
+
 body{
 	background-color: #f2f2f2;
 	margin: 0;
@@ -26,7 +34,7 @@ body{
 
 .weatherHeaderText {
 	font-weight: bold;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-family: 'Pacifico';
 	font-size: 24px;
 }
 

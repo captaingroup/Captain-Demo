@@ -3,12 +3,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Captain - Temperature Example</title>
 <link href="css/stylesheet.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Nova+Slim|Parisienne|Nova+Mono|Pacifico|Comfortaa|Varela+Round|Dr+Sugiyama' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="javascript/jquery-1.10.2.min.js"></script>
 <script src="javascript/globalize.min.js"></script>
 <script src="javascript/dx.chartjs.js"></script>
+
 
 <?php
 		$patientID = $_GET["id"] ;
