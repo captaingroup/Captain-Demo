@@ -33,7 +33,7 @@ $(function() {
 
 function add_fields() {
     var newspan = document.createElement('span');
-    newspan.innerHTML = 'Label: <input type="text"><small>(ft)</small>';
+    newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" >';
     document.getElementById('inputs').appendChild(newspan);
 }
 </script>
@@ -45,9 +45,9 @@ function add_fields() {
     	<form id="addgroup" action="" method="post">
     	<h2>Add Group</h2>
     	<fieldset id="inputs">
-        	<input id="groupname" type="text" name="GroupName" maxlength="12" size="12" placeholder="Group Name" autofocus required>   
-        	<input id="sensorgroupings" type="text" name="SensorGroupings" maxlength="12" size="12" placeholder="Sensor(id,type...)" required>
-            <input id="sensorfrequency" type="text" name="SensorFrequency" maxlength="12" size="12" placeholder="Sensor Frequency" required>
+        	<input id="groupname" type="text" name="GroupName" placeholder="Group Name" autofocus required>   
+        	<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" required>
+            <input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" required>
     	</fieldset>
     	<fieldset id="actions">
         	<input type="button" id="more_fields" onclick="add_fields();" value="Add Sensor">
