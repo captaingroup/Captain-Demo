@@ -48,6 +48,33 @@ $(function() {
     	</fieldset>
 	</form>
     </div>   
+    
+    
+    <form action="" method="post">
+First Name:<input type="text" name="Fname" maxlength="12" size="12"/> <br/>
+Last Name:<input type="text" name="Lname" maxlength="36" size="12"/> <br/>
+Gender:<br/>
+Male:<input type="radio" name="gender" value="Male"/><br/>
+Female:<input type="radio" name="gender" value="Female"/><br/>
+Favorite Food:<br/>
+Steak:<input type="checkbox" name="food[]" value="Steak"/><br/>
+Pizza:<input type="checkbox" name="food[]" value="Pizza"/><br/>
+Chicken:<input type="checkbox" name="food[]" value="Chicken"/><br/>
+<textarea wrap="physical" cols="20" name="quote" rows="5">Enter your favorite quote!</textarea><br/>
+Select a Level of Education:<br/>
+<select name="education">
+<option value="Jr.High">Jr.High</option>
+<option value="HighSchool">HighSchool</option>
+<option value="College">College</option></select><br/>
+Select your favorite time of day:<br/>
+<select size="3" name="TofD">
+<option value="Morning">Morning</option>
+<option value="Day">Day</option>
+<option value="Night">Night</option></select>
+<p><input type="submit" /></p>
+</form>
+    
+    
     <h2>JSON</h2>
 	<pre id="result"></pre>
 </body>
