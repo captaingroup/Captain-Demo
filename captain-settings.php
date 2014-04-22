@@ -34,7 +34,7 @@ $(function() {
 function add_fields() {
     var newspan = document.createElement('span');
     newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" >';
-    document.getElementById('inputs').appendChild(newspan);
+    document.getElementById('sensorgroupings').appendChild(newspan);
 }
 </script>
 
