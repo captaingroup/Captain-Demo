@@ -12,7 +12,7 @@
 	
     <div class="formContainer">
     	<form id="login">
-    	<h1>Add Group</h1>
+    	<h4>Add Group</h4>
     	<fieldset id="inputs">
         	<input id="groupname" type="text" placeholder="Group Name" autofocus required>   
         	<input id="sensorgroupings" type="text" placeholder="Sensor Groups (seperate with commas)" required>
