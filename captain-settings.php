@@ -33,9 +33,35 @@ $(function() {
 
 function add_fields() {
     var newspan = document.createElement('span');
-    newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" >';
+    newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor (id,type)" >';
     document.getElementById('sensorgroups').appendChild(newspan);
 }
+
+
+JSONTest = function() {
+
+    var resultDiv = $("#resultDivContainer");
+
+    $.ajax({
+        url: "https://example.com/api/",
+        type: "POST",
+        data: { apiKey: "23462", method: "example", ip: "208.74.35.5" },
+        dataType: "json",
+        success: function (result) {
+            switch (result) {
+                case true:
+                    processResponse(result);
+                    break;
+                default:
+                    resultDiv.html(result);
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+        }
+    });
+};
 </script>
 
 </head>
@@ -43,21 +69,21 @@ function add_fields() {
 	
     <div class="formContainer">
     	<form id="addgroup" action="" method="post">
-    	<h2>Add Group</h2>
-    	<fieldset id="inputs">
-        	<input id="groupname" type="text" name="GroupName" placeholder="Group Name" autofocus required>   
-    	</fieldset>
-        <fieldset id="sensorgroups">
-        	<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" required>
-    	</fieldset>
-        <fieldset id="inputsaftergroups">
-            <input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" required>
-    	</fieldset>
-    	<fieldset id="actions">
-        	<input type="button" id="more_fields" onclick="add_fields();" value="Add Sensor">
-        	<input type="submit" id="submit" value="Send to Captain">
-    	</fieldset>
-	</form>
+    		<h2>Add Group</h2>
+    		<fieldset id="inputs">
+        		<input id="groupname" type="text" name="GroupName" placeholder="Group Name" autofocus required>   
+    		</fieldset>
+        	<fieldset id="sensorgroups">
+        		<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor (id,type)" required>
+    		</fieldset>
+        	<fieldset id="inputsaftergroups">
+            	<input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" required>
+    		</fieldset>
+    		<fieldset id="actions">
+        		<input type="button" id="more_fields" onclick="add_fields();" value="Add Sensor">
+        		<input type="submit" id="submit" value="Send to Captain">
+    		</fieldset>
+		</form>
     </div>   
     
     
@@ -65,5 +91,6 @@ function add_fields() {
     
     <h2>JSON</h2>
 	<pre id="result"></pre>
+    
 </body>
 </html>
