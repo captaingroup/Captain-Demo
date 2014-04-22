@@ -44,6 +44,7 @@ $(function() {
             <input id="sensorfrequency" type="text" name="SensorFrequency" maxlength="12" size="12" placeholder="Sensor Frequency" required>
     	</fieldset>
     	<fieldset id="actions">
+        	<input type="button" id="more_fields" onclick="add_fields();" value="Add Sensor">
         	<input type="submit" id="submit" value="Send to Captain">
     	</fieldset>
 	</form>
