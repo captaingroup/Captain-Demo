@@ -48,6 +48,7 @@ $(function() {
     	</fieldset>
 	</form>
     </div>   
+    <h2>JSON</h2>
 	<pre id="result">
 </body>
 </html>

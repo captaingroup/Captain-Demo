@@ -17,6 +17,14 @@ body{
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.10);
 }
 
+#result {
+    margin: 10px;
+    background: #eee;
+    padding: 10px;
+    height: 40px;
+    overflow: auto;
+}
+
 fieldset {
     border: 0;
 }
