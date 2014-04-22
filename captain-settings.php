@@ -10,7 +10,7 @@
 <body>
 	
     <div class="formContainer">
-    	<form id="login">
+    	<form id="addgroup">
     	<h2>Add Group</h2>
     	<fieldset id="inputs">
         	<input id="groupname" type="text" placeholder="Group Name" autofocus required>   
