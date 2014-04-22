@@ -33,10 +33,11 @@ $(function() {
 
 function add_fields() {
     var newspan = document.createElement('span');
+	var newspan2 = document.createElement('span');
     newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor (id,type)" >';
     document.getElementById('sensorgroups').appendChild(newspan);
-	newspan.innerHTML = '<input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" >';
-    document.getElementById('inputsaftergroups').appendChild(newspan);
+	newspan2.innerHTML = '<input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" >';
+    document.getElementById('inputsaftergroups').appendChild(newspan2);
 }
 
 
