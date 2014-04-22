@@ -39,9 +39,9 @@ $(function() {
     	<form id="addgroup" action="" method="post">
     	<h2>Add Group</h2>
     	<fieldset id="inputs">
-        	<input id="groupname" type="text" name="Gname" maxlength="12" size="12" placeholder="Group Name" autofocus required>   
-        	<input id="sensorgroupings" type="text" name="Sgroupings" maxlength="12" size="12" placeholder="Sensor(id,type...)" required>
-            <input id="sensorfrequency" type="text" name="Sfrequency" maxlength="12" size="12" placeholder="Sensor Frequency" required>
+        	<input id="groupname" type="text" name="GroupName" maxlength="12" size="12" placeholder="Group Name" autofocus required>   
+        	<input id="sensorgroupings" type="text" name="SensorGroupings" maxlength="12" size="12" placeholder="Sensor(id,type...)" required>
+            <input id="sensorfrequency" type="text" name="SensorFrequency" maxlength="12" size="12" placeholder="Sensor Frequency" required>
     	</fieldset>
     	<fieldset id="actions">
         	<input type="submit" id="submit" value="Send to Captain">
