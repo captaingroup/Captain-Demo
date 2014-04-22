@@ -25,8 +25,8 @@ $.fn.serializeObject = function()
 };
 
 $(function() {
-    $('addgroup').submit(function() {
-        $('#result').text(JSON.stringify($('addgroup').serializeObject()));
+    $('form').submit(function() {
+        $('#result').text(JSON.stringify($('form').serializeObject()));
         return false;
     });
 });
@@ -36,7 +36,7 @@ $(function() {
 <body>
 	
     <div class="formContainer">
-    	<form id="addgroup" action="" method="post">
+    	<form action="" method="post">
     	<h2>Add Group</h2>
     	<fieldset id="inputs">
         	<input id="groupname" type="text" placeholder="Group Name" autofocus required>   
