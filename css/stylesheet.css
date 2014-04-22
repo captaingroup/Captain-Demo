@@ -18,13 +18,11 @@ body{
 }
 
 #login {
-    position: absolute;
-    z-index: 0;
+    
 }
 
 #login:before {
     content: '';
-    position: absolute;
 	text-align: center;
     width: 80%;
     top: 5px;
