@@ -25,8 +25,8 @@ $.fn.serializeObject = function()
 };
 
 $(function() {
-    $('addgroup').submit(function() {
-        $('#result').text(JSON.stringify($('addgroup').serializeObject()));
+    $('form').submit(function() {
+        $('#result').text(JSON.stringify($('form').serializeObject()));
         return false;
     });
 });
