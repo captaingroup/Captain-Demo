@@ -48,6 +48,6 @@ $(function() {
     	</fieldset>
 	</form>
     </div>   
-
+	<pre id="result">
 </body>
 </html>
