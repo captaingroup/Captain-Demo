@@ -14,7 +14,7 @@
     	<h2>Add Group</h2>
     	<fieldset id="inputs">
         	<input id="groupname" type="text" placeholder="Group Name" autofocus required>   
-        	<input id="sensorgroupings" type="text" placeholder="Sensor Groups (seperate with commas)" required>
+        	<input id="sensorgroupings" type="text" placeholder="Sensor(id,type...)" required>
             <input id="sensorfrequency" type="text" placeholder="Sensor Frequency" required>
     	</fieldset>
     	<fieldset id="actions">
