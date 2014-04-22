@@ -12,10 +12,10 @@
 	
     <div class="formContainer">
     	<form id="login">
-    	<h1>Log In</h1>
+    	<h1>Add Group</h1>
     	<fieldset id="inputs">
-        	<input id="username" type="text" placeholder="Username" autofocus required>   
-        	<input id="password" type="password" placeholder="Password" required>
+        	<input id="groupname" type="text" placeholder="Group Name" autofocus required>   
+        	<input id="sensorgroupings" type="password" placeholder="Sensor Groups (seperate with commas)" required>
     	</fieldset>
     	<fieldset id="actions">
         	<input type="submit" id="submit" value="Log in">
