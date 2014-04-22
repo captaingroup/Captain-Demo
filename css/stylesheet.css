@@ -15,7 +15,7 @@ body{
 #login:before {
     content: '';
     position: absolute;
-    z-index: -1;
+    width: 80%;
     border: 1px dashed #ccc;
     top: 5px;
     bottom: 5px;
