@@ -30,6 +30,12 @@ $(function() {
         return false;
     });
 });
+
+function add_fields() {
+    var newspan = document.createElement('span');
+    newspan.innerHTML = 'Label: <input type="text"><small>(ft)</small>';
+    document.getElementById('wrapper').appendChild(newspan);
+}
 </script>
 
 </head>
