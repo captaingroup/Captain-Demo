@@ -12,14 +12,14 @@
 	
     <div class="formContainer">
     	<form id="login">
-    	<h4>Add Group</h4>
+    	<h2>Add Group</h2>
     	<fieldset id="inputs">
         	<input id="groupname" type="text" placeholder="Group Name" autofocus required>   
         	<input id="sensorgroupings" type="text" placeholder="Sensor Groups (seperate with commas)" required>
             <input id="sensorfrequency" type="text" placeholder="Sensor Frequency" required>
     	</fieldset>
     	<fieldset id="actions">
-        	<input type="submit" id="submit" value="Log in">
+        	<input type="submit" id="submit" value="Send to Captain">
         	<a href="">Forgot your password?</a><a href="">Register</a>
     	</fieldset>
 	</form>
