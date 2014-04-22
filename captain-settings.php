@@ -49,6 +49,6 @@ $(function() {
 	</form>
     </div>   
     <h2>JSON</h2>
-	<pre id="result">
+	<pre id="result"></pre>
 </body>
 </html>
