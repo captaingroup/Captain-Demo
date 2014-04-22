@@ -36,7 +36,7 @@ function add_fields() {
     newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor (id,type)" >';
     document.getElementById('sensorgroups').appendChild(newspan);
 	newspan.innerHTML = '<input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" >';
-    document.getElementById('sensorfrequency').appendChild(newspan);
+    document.getElementById('inputsaftergroups').appendChild(newspan);
 }
 
 
