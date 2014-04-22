@@ -6,7 +6,6 @@
 <link href='http://fonts.googleapis.com/css?family=Nova+Slim|Parisienne|Nova+Mono|Pacifico|Comfortaa|Varela+Round|Dr+Sugiyama' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
-<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	
@@ -20,7 +19,6 @@
     	</fieldset>
     	<fieldset id="actions">
         	<input type="submit" id="submit" value="Send to Captain">
-        	<a href="">Forgot your password?</a><a href="">Register</a>
     	</fieldset>
 	</form>
     </div>   
