@@ -34,7 +34,7 @@ $(function() {
 function add_fields() {
     var newspan = document.createElement('span');
     newspan.innerHTML = '<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" >';
-    document.getElementById('sensorgroupings').appendChild(newspan);
+    document.getElementById('sensorgroups').appendChild(newspan);
 }
 </script>
 
@@ -46,7 +46,11 @@ function add_fields() {
     	<h2>Add Group</h2>
     	<fieldset id="inputs">
         	<input id="groupname" type="text" name="GroupName" placeholder="Group Name" autofocus required>   
+    	</fieldset>
+        <fieldset id="sensorgroups">
         	<input id="sensorgroupings" type="text" name="SensorGroupings" placeholder="Sensor(id,type...)" required>
+    	</fieldset>
+        <fieldset id="inputsaftergroups">
             <input id="sensorfrequency" type="text" name="SensorFrequency" placeholder="Sensor Frequency" required>
     	</fieldset>
     	<fieldset id="actions">
