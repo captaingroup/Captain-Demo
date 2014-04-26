@@ -80,7 +80,6 @@
 			$groupName = $group['Name'];
 			
 			echo "<script>
-			alert('$groupID');
 			id = '$groupID';
 			name = '$groupName';
 			
@@ -90,7 +89,9 @@
 
 			var select = document.getElementById('cd-dropdown');
 			for(index in myobject) {
-    			select.options[select.options.length] = new Option(myobject[index], index);
+				opt = new Option(myobject[index], index);
+				opt.className = 'icon-star';
+    			select.options[select.options.length] = opt;
 			}
 			</script>";
         }
