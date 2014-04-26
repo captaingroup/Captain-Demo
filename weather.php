@@ -162,7 +162,7 @@
 				gutter : 5,
 				onOptionSelect : function(opt) {
 				var a = opt;
-				alert($("#opt")[0]);
+				alert(opt[0].id);
 				
 				
 				}
