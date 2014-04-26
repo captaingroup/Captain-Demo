@@ -207,7 +207,7 @@
 				
 				var option = document.createElement('option');
 				option.text = 'kiwi';
-				x.add(option,x[2]);
+				select.add(option,x[2]);
 			}
 			</script>";
         }
