@@ -216,7 +216,10 @@
     }
 ?>
 
-	
+	<select name="selTitle" id="titles" onchange="check();">
+    <option value="Mr.">Mr.</option>
+    <option value="Ms.">Ms.</option>
+    </select>
     
 
 	<div class="chartContainer">
