@@ -156,6 +156,7 @@
 			<div class="fleft">
 				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="onOptionChange()">
 					<option value="-1" selected>Select Sensor Group</option>
+                    <option value="1" class="icon-monkey">Monkey</option>
 				</select>
 			</div>
 		</section>
@@ -210,7 +211,6 @@
 				opt = new Option(myobject[index], index);
 				opt.className = 'icon-star';
     			select.options[select.options.length] = opt;
-				select.onchange = function(){alert('hello')};
 			}
 			</script>";
         }
