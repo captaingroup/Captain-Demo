@@ -161,7 +161,7 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-				alert(Object.prototype.toString.call(opt)); 
+				JSON.stringify(opt); 
 				
 				
 				
