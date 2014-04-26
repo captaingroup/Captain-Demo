@@ -161,8 +161,7 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-				alert("hi"); 
-				<!-- Script to populate charts from selected group !-->
+				alert(opt); 
 				
 				
 				
