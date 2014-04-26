@@ -9,7 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="css/style1.css" />
 		<script src="js/modernizr.custom.63321.js"></script>
 	</head>
-	<body>        
+	<body>
+    
         
         
         
@@ -86,7 +87,6 @@
 			dateAdmitted = '$dateAdmitted';
 			
 			var newspan = document.createElement('span');
-    		newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
     		document.getElementById('cd-dropdown').appendChild(newspan);
 	
 	 </script>";
