@@ -162,7 +162,7 @@
 				gutter : 5,
 				onOptionSelect : function(opt) {
 				var a = opt;
-				alert(opt.val());
+				console.log( $( "li" ).get( 0 ) );
 				
 				
 				}
