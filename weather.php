@@ -160,16 +160,18 @@
 		$( function() {	
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
-				onOptionSelect : click(); }
+				onOptionSelect : function(opt) {
+				alert("hi"); 
+				<!-- Script to populate charts from selected group !-->
+				
+				
+				
+				}
 			} );
 		});	
 	</script>
-        <!-- Script to populate charts from selected group !-->
-	<script>
-		function click(){
-			alert("hi");
-		}
-	</script>
+        
+
     
         
     <?php
