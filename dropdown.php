@@ -63,58 +63,13 @@
 
 		</script>
         
-<?php
-    // DB connection info
-    //TODO: Update the values for $host, $user, $pwd, and $db
-    //using the values you retrieved earlier from the portal.
-    $host = "sql3.freemysqlhosting.net";
-    $user = "sql331497";
-    $pwd = "sI2*yG2*";
-    $db = "sql331497";
-    // Connect to database.
-    try {
-        $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
-        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    }
-    catch(Exception $e){
-        die(var_dump($e));
-		echo 'did not work';
-    }
-    
-    // Retrieve data
-    $sql_select = "SELECT * FROM `3-Patient`";
-    $stmt = $conn->query($sql_select);
-    $patients = $stmt->fetchAll(); 
-    if(count($patients) > 0) {
-        foreach($patients as $patient) {
-			
-			$patientID = $patient['Patient ID'];
-			$patientName = $patient['Patient Name'];
-			$patientAge = $patient['Age'];
-			$medicalCondition = $patient['Medical Condition'];
-			$dateAdmitted = $patient['Date Admitted'];
-			
-			echo "<script>
-			
-			id = '$patientID';
-			name = '$patientName';
-			age = '$patientAge';
-			medicalCondition = '$medicalCondition';
-			dateAdmitted = '$dateAdmitted';
-			
-			add_fields();
-	
-	 </script>";
-        }
-    } else {
-    }
-?>
         <script>
 		function add_fields() {
 		var newspan = document.createElement('span');
     		newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
     		document.getElementById('cd-dropdown').appendChild(newspan);
 		}
+		add_fields();
         </script>
 	</body>
 </html>
