@@ -211,11 +211,12 @@
     }
 ?>
 
-<script>
-$('#cd-dropdown').change(function() {
-  			$('#weatherHeader').text($('#cd-dropdown').find(":selected").text());
-		});
-	</script>
+<script type="text/javascript">
+    alert('onload');
+    document.getElementById('cd-dropdown').addEventListener('change',function(){
+         alert('Hello');
+    });
+</script>
 	
     
 
