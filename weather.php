@@ -141,10 +141,7 @@
             		cache: false
         			});
 		});	
-	</script>
-    
-    <!-- Script to populate charts from selected group !-->
-    
+	</script>    
     
     
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
@@ -163,10 +160,17 @@
 		$( function() {	
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
-				onOptionSelect : function(opt) { alert("hi"); }
+				onOptionSelect : click(); }
 			} );
 		});	
 	</script>
+        <!-- Script to populate charts from selected group !-->
+	<script>
+		function click(){
+			alert("hi");
+		}
+	</script>
+    
         
     <?php
     // DB connection info
