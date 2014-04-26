@@ -44,6 +44,7 @@ a {
 .container {
 	width: 100%;
 	position: relative;
+	text-align:center;
 }
 
 .main,
@@ -78,7 +79,6 @@ a {
 }
 
 .fleft {
-	float: left;
 	width: 49%;
 	min-width: 300px;
 }
