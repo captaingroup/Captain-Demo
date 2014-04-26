@@ -157,9 +157,6 @@
             		//cache: false
         			//});
 		}
-		$('#cd-dropdown').change(function() {
-  			$('#weatherHeader').text($('#cd-dropdown').find(":selected").text());
-		});
 	</script>
     
     
@@ -232,7 +229,11 @@
     }
 ?>
 
-
+<script>
+$('#cd-dropdown').change(function() {
+  			$('#weatherHeader').text($('#cd-dropdown').find(":selected").text());
+		});
+	</script>
 	
     
 
