@@ -140,6 +140,12 @@
     
     <!-- Script to populate charts from selected group !-->
     <script>
+	$(function(){ /* DOM ready */
+   	 	$("#cd-dropdown").change(function() {
+        	alert('The option with value ' + $(this).val());
+    	});
+	});
+	
 		function onOptionChange(){
 			//var elem = document.getElementById("cd-dropdown");
     		//selectedNode = elem.options[elem.selectedIndex];
@@ -156,7 +162,6 @@
 			<div class="fleft">
 				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="onOptionChange()">
 					<option value="-1" selected>Select Sensor Group</option>
-                    <option value="1" onChange="onOptionChange()" class="icon-monkey">Monkey</option>
 				</select>
 			</div>
 		</section>
