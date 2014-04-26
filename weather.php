@@ -144,7 +144,7 @@
 			var elem = document.getElementById("cd-dropdown"),
     		selectedNode = elem.options[elem.selectedIndex];
 			a = selectedNode.value;
-			alert('a');
+			alert("hello");
 		}
 	</script>
 
@@ -221,7 +221,7 @@
 			var elem = document.getElementById("cd-dropdown"),
     		selectedNode = elem.options[elem.selectedIndex];
 			a = selectedNode.value;
-			alert(a);
+			alert("hello");
 		}
 	</script>
     
