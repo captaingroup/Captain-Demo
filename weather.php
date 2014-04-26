@@ -4,6 +4,7 @@
 <title>Captain - Temperature Example</title>
 <link href="css/stylesheet.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="javascript/jquery-1.10.2.min.js"></script>
@@ -12,7 +13,6 @@
 
 <link rel="stylesheet" type="text/css" href="css/style1.css" />
 		<script src="js/modernizr.custom.63321.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
 
 <?php
