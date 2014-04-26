@@ -94,9 +94,7 @@ for(index in myobject) {
 			name = '$groupName';
 			
 			var myobject = {
-    ValueA : 'Text A',
-    ValueB : 'Text B',
-    ValueC : 'Text C'
+    id : name
 };
 
 var select = document.getElementById('cd-dropdown');
