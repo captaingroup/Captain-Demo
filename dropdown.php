@@ -115,6 +115,6 @@
     		newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
     		document.getElementById('cd-dropdown').appendChild(newspan);
 		}
-        
+        </script>
 	</body>
 </html>
