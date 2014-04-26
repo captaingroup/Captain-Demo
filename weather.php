@@ -166,7 +166,7 @@
 				console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 				<?php
 					$groupNameDisplaying = 'a';
-					echo "<script>alert(.$groupNameDisplaying.);</script>";
+					echo "<script type='text/javascript'>alert('$groupNameDisplaying');</script>";
 				?>
 				}
 			} );
