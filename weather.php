@@ -222,15 +222,11 @@
 			for(index in myobject) {
 				opt = new Option(myobject[index], index);
 				opt.className = 'icon-star';
+				opt.onClick(optionChange());
     			select.options[select.options.length] = opt;
 			}
 			</script>";
         }
-		echo "<script>
-		var select = document.getElementById('cd-dropdown');
-    	select.onchange = function(){optionChange()};
-		</script>";
-				
     } else {
     }
 ?>
