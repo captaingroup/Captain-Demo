@@ -146,9 +146,9 @@
 				a = selectedNode.value;	
 				alert(a);
 				
-				}
+				
 				//$.ajax({
-            		//url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
+            		//url: 'functions/live-server-data2.php?id=', 
             		//success: function(point) {
             			//gauge.value(point);
 						//val = val + 1;
