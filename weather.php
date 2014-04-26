@@ -142,7 +142,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="onOptionChange()">
 					<option value="-1" selected>Select Sensor Group</option>
 				</select>
 			</div>
@@ -208,10 +208,12 @@
 
 	<!-- Script to populate charts from selected group !-->
     <script>
-		var elem = document.getElementById("cd-dropdown"),
-    	selectedNode = elem.options[elem.selectedIndex];
-		a = selectedNode.value;
-		alert(a);
+		function onOptionChange(){
+			var elem = document.getElementById("cd-dropdown"),
+    		selectedNode = elem.options[elem.selectedIndex];
+			a = selectedNode.value;
+			alert(a);
+		}
 	</script>
     
 
