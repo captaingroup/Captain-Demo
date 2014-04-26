@@ -228,7 +228,7 @@
         }
 		echo "<script>
 		var select = document.getElementById('cd-dropdown');
-    	select.onChange(optionChange());
+    	select.onchange = function(){optionChange()};
 		</script>";
 				
     } else {
