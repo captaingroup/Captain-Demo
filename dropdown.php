@@ -8,7 +8,9 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/style1.css" />
 		<script src="js/modernizr.custom.63321.js"></script>
-	</head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+        </head>
 	<body>
         
         
@@ -34,8 +36,7 @@
 				</div>
 			</section>
 		</div><!-- /container -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+		
 		<script type="text/javascript">
 			
 			$( function() {
@@ -47,14 +48,5 @@
 			});
 
 		</script>
-        
-        <script>
-		function add_fields() {
-		var newspan = document.createElement('span');
-    	newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
-    	document.getElementById('cd-dropdown').appendChild(newspan);
-		}
-		add_fields();
-        </script>
 	</body>
 </html>
