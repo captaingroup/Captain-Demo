@@ -144,9 +144,16 @@
 	</script>
     
     <!-- Script to populate charts from selected group !-->
+    
+    
+    
+	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
-        
-    <?php
+	<div class="container">
+		<section class="main clearfix">		
+			<div class="fleft">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
+					<?php
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
@@ -174,35 +181,14 @@
 			$groupID = $group['ID'];
 			$groupName = $group['Name'];
 			
-			echo "<script>
-			id = '$groupID';
-			name = '$groupName';
-			
-			var myobject = {
-    		'$groupID' : name
-			};
-
-			var select = document.getElementById('cd-dropdown');
-			for(index in myobject) {
-				opt = new Option(myobject[index], index);
-				opt.className = 'icon-star';
-    			select.options[select.options.length] = opt;
-			}
-			</script>";
+			/*** create the options ***/
+            echo '<option value="'.$groupID.'"';
+            
+            echo '>'. $groupName . '</option>'."\n";
         }
     } else {
     }
 ?>
-
-
-<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
-
-	<div class="container">
-		<section class="main clearfix">		
-			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
-					<option value="-1" selected>Select Sensor Group</option>
-                    <option value="1" class="icon-monkey">Monkey</option>
 				</select>
 			</div>
 		</section>
@@ -215,16 +201,14 @@
 			} );
 		});	
 	</script>
-    <div class="container">
-		<section class="main clearfix">		
-			<div class="fleft">
+        
+    
+
 	<select name="selTitle" id="titles" onchange="check();" class="cd-select">
     <option value="Mr.">Mr.</option>
     <option value="Ms.">Ms.</option>
     </select>
-    </div>
-		</section>
-	</div><!-- /container -->
+    
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
