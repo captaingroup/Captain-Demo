@@ -210,7 +210,7 @@
 				opt = new Option(myobject[index], index);
 				opt.className = 'icon-star';
     			select.options[select.options.length] = opt;
-				select.onchange = function(){alert('Dynamic')};
+				select.onchange = function(){alert('hello')};
 			}
 			</script>";
         }
