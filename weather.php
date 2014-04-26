@@ -17,6 +17,7 @@
 
 <?php
 		$patientID = $_GET["id"] ;
+		$groupNameDisplaying = null;
 ?>
 
 
@@ -161,10 +162,12 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-				var a = opt;
+				var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 				console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
-				
-				
+				<?php
+					$groupNameDisplaying = 'a';
+					echo $groupNameDisplaying;
+				?>
 				}
 			} );
 		});	
