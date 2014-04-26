@@ -89,7 +89,7 @@ for(index in myobject) {
 			$groupName = $group['Name'];
 			
 			echo "<script>
-			
+			alert('$groupID');
 			id = '$groupID';
 			name = '$groupName';
 			
