@@ -21,14 +21,14 @@
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
 <script>
     function check() {
        alert("Hi");
     }
 </script>
-</head>
-<body>
-
 
 <script>
 	var chart;
