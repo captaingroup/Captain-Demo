@@ -51,10 +51,10 @@
         <script>
 		function add_fields() {
 		var newspan = document.createElement('span');
-    		newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
-    		document.getElementById('cd-dropdown').appendChild(newspan);
+    	newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
+    	document.getElementById('cd-dropdown').appendChild(newspan);
 		}
-		"add_fields()";
+		add_fields();
         </script>
 	</body>
 </html>
