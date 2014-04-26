@@ -167,6 +167,8 @@
 				<?php
 					$groupNameDisplaying = 'a';
 				?>
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+				gauge.value(100);
 				}
 			} );
 		});	
