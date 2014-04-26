@@ -204,6 +204,15 @@
     } else {
     }
 ?>
+
+
+	<!-- Script to populate charts from selected group !-->
+    <script>
+		var elem = document.getElementById("cd-dropdown"),
+    	selectedNode = elem.options[elem.selectedIndex];
+		a = selectedNode.value;
+		alert(a);
+	</script>
     
 
 	<div class="chartContainer">
