@@ -143,20 +143,14 @@
 		});	
 	</script>
     
-    <!-- Script to populate charts from selected group !-->
-    
-    <script>
-	$('cd-dropdown').click(function () {
-    alert($(this).data('id'));
-});
-</script>
+
     
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown"  class="cd-select" onchange="check();">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
 					<option value="-1" selected>Select Sensor Group</option>
                     <option value="1" class="icon-monkey">Monkey</option>
 				</select>
@@ -166,9 +160,7 @@
         
     <script type="text/javascript">		
 		$( function() {	
-			$( '#cd-dropdown' ).dropdown( {
-				gutter : 5
-			} );
+			
 		});	
 	</script>
         
