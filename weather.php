@@ -139,19 +139,23 @@
 	</script>
     
     <!-- Script to populate charts from selected group !-->
-    <script>
-	$(function(){ /* DOM ready */
-   	 	$("#cd-dropdown").change(function() {
-        	alert('The option with value ' + $(this).val());
-    	});
-	});
-	
-		function onOptionChange(){
-			//var elem = document.getElementById("cd-dropdown");
-    		//selectedNode = elem.options[elem.selectedIndex];
-			//a = selectedNode.value;
-			alert("hello");
-		}
+    <script>	
+		$(document).ready(function onOptionChange() {
+				var elem = document.getElementById("cd-dropdown");
+    			selectedNode = elem.options[elem.selectedIndex];
+				a = selectedNode.value;	
+				alert("hello");			
+				//$.ajax({
+            		//url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
+            		//success: function(point) {
+            			//gauge.value(point);
+						//val = val + 1;
+                		//setTimeout(requestData2, 1000);  
+            		//},
+            		//cache: false
+        			//});
+		});	
+		
 	</script>
     
     
