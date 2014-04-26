@@ -140,11 +140,12 @@
     
     <!-- Script to populate charts from selected group !-->
     <script>	
-		$(document).ready(function onOptionChange() {
+		$(document).ready(function optionChange() {
 				var elem = document.getElementById("cd-dropdown");
     			selectedNode = elem.options[elem.selectedIndex];
 				a = selectedNode.value;	
-				alert(a);			
+				alert(a);
+						
 				//$.ajax({
             		//url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
             		//success: function(point) {
@@ -164,7 +165,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="onOptionChange()">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="optionChange()">
 					<option value="-1" selected>Select Sensor Group</option>
                     <option value="1" class="icon-monkey">Monkey</option>
 				</select>
