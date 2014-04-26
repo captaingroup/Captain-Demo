@@ -157,7 +157,9 @@
             		//cache: false
         			//});
 		}
-		
+		$('#cd-dropdown').change(function() {
+  			alert($('#product-select').find(":selected").text());
+		});
 	</script>
     
     
