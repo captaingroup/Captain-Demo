@@ -144,11 +144,6 @@
 			<div class="fleft">
 				<select id="cd-dropdown" name="cd-dropdown" class="cd-select">
 					<option value="-1" selected>Select Sensor Group</option>
-					<option value="1" class="icon-star">Monkey</option>
-					<option value="2" class="icon-bear">Bear</option>
-					<option value="3" class="icon-squirrel">Squirrel</option>
-					<option value="4" class="icon-elephant">Elephant</option>
-                    <option value="4" class="icon-elephant">Elephant</option>
 				</select>
 			</div>
 		</section>
