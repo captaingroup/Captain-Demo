@@ -162,14 +162,10 @@
 		$( function() {	
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5
-				
+				onOptionSelect : function(opt) { alert("hi"); }
 			} );
 		});	
 		
-		$("#cd-dropdown").change(function () {
-        var end = this.value;
-        alert("hi~");
-    });
 	</script>
         
     <?php
