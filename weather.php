@@ -21,14 +21,14 @@
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-
-</head>
-<body>
 <script>
     function check() {
        alert("Hi");
     }
 </script>
+</head>
+<body>
+
 
 <script>
 	var chart;
@@ -153,7 +153,22 @@
 		<section class="main clearfix">		
 			<div class="fleft">
 				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
-					<?php
+					<option value="-1" selected>Select Sensor Group</option>
+                    <option value="1" class="icon-monkey">Monkey</option>
+				</select>
+			</div>
+		</section>
+	</div><!-- /container -->
+        
+    <script type="text/javascript">		
+		$( function() {	
+			$( '#cd-dropdown' ).dropdown( {
+				gutter : 5
+			} );
+		});	
+	</script>
+        
+    <?php
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
@@ -181,28 +196,25 @@
 			$groupID = $group['ID'];
 			$groupName = $group['Name'];
 			
-			/*** create the options ***/
-            echo '<option value="'.$groupID.'"';
-            
-            echo '>'. $groupName . '</option>'."\n";
+			echo "<script>
+			id = '$groupID';
+			name = '$groupName';
+			
+			var myobject = {
+    		'$groupID' : name
+			};
+
+			var select = document.getElementById('cd-dropdown');
+			for(index in myobject) {
+				opt = new Option(myobject[index], index);
+				opt.className = 'icon-star';
+    			select.options[select.options.length] = opt;
+			}
+			</script>";
         }
     } else {
     }
 ?>
-				</select>
-			</div>
-		</section>
-	</div><!-- /container -->
-        
-    <script type="text/javascript">		
-		$( function() {	
-			$( '#cd-dropdown' ).dropdown( {
-				gutter : 5
-			} );
-		});	
-	</script>
-        
-    
 
 	<select name="selTitle" id="titles" onchange="check();" class="cd-select">
     <option value="Mr.">Mr.</option>
