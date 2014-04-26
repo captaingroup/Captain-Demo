@@ -139,25 +139,7 @@
 	</script>
     
     <!-- Script to populate charts from selected group !-->
-    <script>	
-		function optionChange() {
-				var elem = document.getElementById("cd-dropdown");
-    			selectedNode = elem.options[elem.selectedIndex];
-				a = selectedNode.value;	
-				alert(a);
-				
-				
-				//$.ajax({
-            		//url: 'functions/live-server-data2.php?id=', 
-            		//success: function(point) {
-            			//gauge.value(point);
-						//val = val + 1;
-                		//setTimeout(requestData2, 1000);  
-            		//},
-            		//cache: false
-        			//});
-		}
-	</script>
+    
     
     
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
