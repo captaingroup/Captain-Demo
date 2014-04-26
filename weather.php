@@ -161,8 +161,7 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-					console.log(opt);
-				alert(opt[1].innerHTML()); 
+				alert(opt.childNodes[0].innerHTML); 
 				
 				
 				
