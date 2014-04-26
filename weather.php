@@ -158,7 +158,7 @@
         			//});
 		}
 		$('#cd-dropdown').change(function() {
-  			alert($('#cd-dropdown').find(":selected").text());
+  			$('#weatherHeader').text($('#cd-dropdown').find(":selected").text());
 		});
 	</script>
     
