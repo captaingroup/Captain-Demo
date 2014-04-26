@@ -145,7 +145,15 @@
     			selectedNode = elem.options[elem.selectedIndex];
 				a = selectedNode.value;	
 				alert(a);
-						
+				while(true){
+					var elem = document.getElementById("cd-dropdown");
+    				selectedNode = elem.options[elem.selectedIndex];
+					b = selectedNode.value;
+					
+					if(b == a){
+						alert("why");
+					}
+				}
 				//$.ajax({
             		//url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
             		//success: function(point) {
