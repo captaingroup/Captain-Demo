@@ -166,7 +166,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="optionChange();">
 					<option value="-1" selected>Select Sensor Group</option>
                     <option value="1" class="icon-monkey">Monkey</option>
 				</select>
