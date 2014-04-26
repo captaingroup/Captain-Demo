@@ -204,6 +204,10 @@
 				opt = new Option(myobject[index], index);
 				opt.className = 'icon-star';
     			select.options[select.options.length] = opt;
+				
+				var option = document.createElement('option');
+				option.text = 'kiwi';
+				x.add(option,x[2]);
 			}
 			</script>";
         }
