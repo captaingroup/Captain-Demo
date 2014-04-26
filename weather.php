@@ -145,7 +145,11 @@
     
     <!-- Script to populate charts from selected group !-->
     
-    
+    <script>
+	$('cd-dropdown').click(function () {
+    alert($(this).data('id'));
+});
+</script>
     
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
