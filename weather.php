@@ -143,7 +143,9 @@
 		});	
 	</script>
     
-
+    <!-- Script to populate charts from selected group !-->
+    
+    
     
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
@@ -161,11 +163,10 @@
     <script type="text/javascript">		
 		$( function() {	
 			$( '#cd-dropdown' ).dropdown( {
-				gutter : 5
+				gutter : 5,
 				onOptionSelect : function(opt) { alert("hi"); }
 			} );
 		});	
-		
 	</script>
         
     <?php
@@ -215,12 +216,6 @@
     } else {
     }
 ?>
-
-	<select name="selTitle" id="titles" onchange="check();" class="cd-select">
-    <option value="Mr.">Mr.</option>
-    <option value="Ms.">Ms.</option>
-    </select>
-    
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
