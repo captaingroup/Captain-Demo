@@ -94,14 +94,14 @@ for(index in myobject) {
 			name = '$groupName';
 			
 			var myobject = {
-    id : name
-};
+    		'$groupID' : name
+			};
 
-var select = document.getElementById('cd-dropdown');
-for(index in myobject) {
-    select.options[select.options.length] = new Option(myobject[index], index);
-}
-			 </script>";
+			var select = document.getElementById('cd-dropdown');
+			for(index in myobject) {
+    			select.options[select.options.length] = new Option(myobject[index], index);
+			}
+			</script>";
         }
     } else {
     }
