@@ -215,12 +215,16 @@
 			} );
 		});	
 	</script>
-    
+    <div class="container">
+		<section class="main clearfix">		
+			<div class="fleft">
 	<select name="selTitle" id="titles" onchange="check();" class="cd-select">
     <option value="Mr.">Mr.</option>
     <option value="Ms.">Ms.</option>
     </select>
-    
+    </div>
+		</section>
+	</div><!-- /container -->
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
