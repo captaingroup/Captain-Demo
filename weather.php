@@ -137,6 +137,18 @@
         			});
 		});	
 	</script>
+    
+    <!-- Script to populate charts from selected group !-->
+    <script>
+		function onOptionChange(){
+			var elem = document.getElementById("cd-dropdown");
+    		selectedNode = elem.options[elem.selectedIndex];
+			a = selectedNode.value;
+			alert("hello");
+		}
+	</script>
+    
+    
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
 	<div class="container">
@@ -206,15 +218,7 @@
 ?>
 
 
-	<!-- Script to populate charts from selected group !-->
-    <script>
-		function onOptionChange(){
-			var elem = document.getElementById("cd-dropdown");
-    		selectedNode = elem.options[elem.selectedIndex];
-			a = selectedNode.value;
-			alert("hello");
-		}
-	</script>
+	
     
 
 	<div class="chartContainer">
