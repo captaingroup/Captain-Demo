@@ -55,6 +55,6 @@
     		document.getElementById('cd-dropdown').appendChild(newspan);
 		}
 		add_fields();
-        </script>
+        </script>add_fields();
 	</body>
 </html>
