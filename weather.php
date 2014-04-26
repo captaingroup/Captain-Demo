@@ -21,6 +21,11 @@
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script>
+    function check() {
+       alert("Hi");
+    }
+</script>
 </head>
 <body>
 
@@ -147,7 +152,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="check();">
 					<option value="-1" selected>Select Sensor Group</option>
                     <option value="1" class="icon-monkey">Monkey</option>
 				</select>
@@ -211,12 +216,6 @@
     }
 ?>
 
-<script>
-    alert('onload');
-    document.getElementById('cd-dropdown').addEventListener('change',function(){
-         alert('Hello');
-    });
-</script>
 	
     
 
