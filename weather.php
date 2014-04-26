@@ -140,7 +140,7 @@
     
     <!-- Script to populate charts from selected group !-->
     <script>	
-		$(document).ready(function optionChange() {
+		function optionChange() {
 				var elem = document.getElementById("cd-dropdown");
     			selectedNode = elem.options[elem.selectedIndex];
 				a = selectedNode.value;	
@@ -156,7 +156,7 @@
             		//},
             		//cache: false
         			//});
-		});	
+		}
 		
 	</script>
     
