@@ -160,8 +160,16 @@
         
     <script type="text/javascript">		
 		$( function() {	
-			
+			$( '#cd-dropdown' ).dropdown( {
+				gutter : 5
+				
+			} );
 		});	
+		
+		$("#cd-dropdown").change(function () {
+        var end = this.value;
+        alert("hi~");
+    });
 	</script>
         
     <?php
