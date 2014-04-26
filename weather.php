@@ -144,7 +144,7 @@
 				var elem = document.getElementById("cd-dropdown");
     			selectedNode = elem.options[elem.selectedIndex];
 				a = selectedNode.value;	
-				alert("hello");			
+				alert(a);			
 				//$.ajax({
             		//url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
             		//success: function(point) {
