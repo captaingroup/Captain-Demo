@@ -151,7 +151,11 @@
 					b = selectedNode.value;
 					
 					if(b == a){
-						alert("why");
+						//alert("why");
+					}
+					else{
+						a = b;
+						alert(b);	
 					}
 				}
 				//$.ajax({
