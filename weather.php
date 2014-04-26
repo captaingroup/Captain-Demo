@@ -152,7 +152,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="check();">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
 					<option value="-1" selected>Select Sensor Group</option>
                     <option value="1" class="icon-monkey">Monkey</option>
 				</select>
@@ -216,7 +216,7 @@
     }
 ?>
 
-	<select name="selTitle" id="titles" onchange="check();">
+	<select name="selTitle" id="titles" onchange="check();" class="cd-select">
     <option value="Mr.">Mr.</option>
     <option value="Ms.">Ms.</option>
     </select>
