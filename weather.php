@@ -158,7 +158,7 @@
         			//});
 		}
 		$('#cd-dropdown').change(function() {
-  			alert($('#product-select').find(":selected").text());
+  			alert($('#cd-dropdown').find(":selected").text());
 		});
 	</script>
     
@@ -168,9 +168,9 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="optionChange();">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select">
 					<option value="-1" selected>Select Sensor Group</option>
-                    <option value="1" class="icon-monkey" onClick="optionChange();">Monkey</option>
+                    <option value="1" class="icon-monkey">Monkey</option>
 				</select>
 			</div>
 		</section>
@@ -224,7 +224,6 @@
 			for(index in myobject) {
 				opt = new Option(myobject[index], index);
 				opt.className = 'icon-star';
-				opt.onClick(optionChange());
     			select.options[select.options.length] = opt;
 			}
 			</script>";
