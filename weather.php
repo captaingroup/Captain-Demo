@@ -156,7 +156,7 @@
 			<div class="fleft">
 				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="onOptionChange()">
 					<option value="-1" selected>Select Sensor Group</option>
-                    <option value="1" class="icon-monkey">Monkey</option>
+                    <option value="1" onChange="onOptionChange()" class="icon-monkey">Monkey</option>
 				</select>
 			</div>
 		</section>
