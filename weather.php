@@ -219,7 +219,6 @@
 			};
 
 			var select = document.getElementById('cd-dropdown');
-			select.onChange(optionChange());
 			for(index in myobject) {
 				opt = new Option(myobject[index], index);
 				opt.className = 'icon-star';
@@ -227,6 +226,11 @@
 			}
 			</script>";
         }
+		echo "<script>
+		var select = document.getElementById('cd-dropdown');
+    	select.onChange(optionChange());
+		</script>";
+				
     } else {
     }
 ?>
