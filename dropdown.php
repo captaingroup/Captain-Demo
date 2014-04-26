@@ -102,7 +102,11 @@
 			medicalCondition = '$medicalCondition';
 			dateAdmitted = '$dateAdmitted';
 			
-			patients.add( { patientID: id, patientName: name, patientAge:age, medicalCondition: medicalCondition, dateAdmitted: dateAdmitted } ); </script>";
+			var newspan = document.createElement('span');
+    		newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
+    		document.getElementById('cd-dropdown').appendChild(newspan);
+	
+	 </script>";
         }
     } else {
     }
