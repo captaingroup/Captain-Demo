@@ -141,7 +141,7 @@
 
 	<script>
 		function onOptionChange(){
-			var elem = document.getElementById("cd-dropdown"),
+			var elem = document.getElementById("cd-dropdown");
     		selectedNode = elem.options[elem.selectedIndex];
 			a = selectedNode.value;
 			alert("hello");
@@ -218,7 +218,7 @@
 	<!-- Script to populate charts from selected group !-->
     <script>
 		function onOptionChange(){
-			var elem = document.getElementById("cd-dropdown"),
+			var elem = document.getElementById("cd-dropdown");
     		selectedNode = elem.options[elem.selectedIndex];
 			a = selectedNode.value;
 			alert("hello");
