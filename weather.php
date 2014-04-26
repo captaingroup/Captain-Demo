@@ -139,6 +139,15 @@
 	</script>
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
+	<script>
+		function onOptionChange(){
+			var elem = document.getElementById("cd-dropdown"),
+    		selectedNode = elem.options[elem.selectedIndex];
+			a = selectedNode.value;
+			alert(a);
+		}
+	</script>
+
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
