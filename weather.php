@@ -211,7 +211,7 @@
     }
 ?>
 
-<script type="text/javascript">
+<script>
     alert('onload');
     document.getElementById('cd-dropdown').addEventListener('change',function(){
          alert('Hello');
