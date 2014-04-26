@@ -10,7 +10,23 @@
 		<script src="js/modernizr.custom.63321.js"></script>
 	</head>
 	<body>
-    
+    <script>
+	$(document).ready(function requestData2() {
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+				
+				$.ajax({
+            		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
+            		success: function(point) {
+            			gauge.value(point);
+						val = val + 1;
+                		setTimeout(requestData2, 1000);  
+            		},
+            		cache: false
+        			});
+		});
+		</script>
+        
+        
         
         
         
@@ -86,15 +102,19 @@
 			medicalCondition = '$medicalCondition';
 			dateAdmitted = '$dateAdmitted';
 			
-			var newspan = document.createElement('span');
-    		document.getElementById('cd-dropdown').appendChild(newspan);
+			add_fields();
 	
 	 </script>";
         }
     } else {
     }
 ?>
-        
+        <script>
+		function add_fields() {
+		var newspan = document.createElement('span');
+    		newspan.innerHTML = '<option value="6" class="icon-elephant">Elephant</option>';
+    		document.getElementById('cd-dropdown').appendChild(newspan);
+		}
         
 	</body>
 </html>
