@@ -47,6 +47,17 @@
 
 			});
 
+		var myobject = {
+    ValueA : 'Text A',
+    ValueB : 'Text B',
+    ValueC : 'Text C'
+};
+
+var select = document.getElementById("cd-dropdown");
+for(index in myobject) {
+    select.options[select.options.length] = new Option(myobject[index], index);
+}
+		
 		</script>
 	</body>
 </html>
