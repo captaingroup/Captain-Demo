@@ -173,7 +173,10 @@
 					gauge.value(100);
 					alert("<?php echo $groupNameDisplaying;?>");
 					$.ajax({
-            		url: "functions/getGroupSensors.php?id=" + a, 
+            		url: "functions/getGroupSensors.php",
+					type: "POST",
+    				dataType:'json', // add json datatype to get json
+     				data: ({ID: a}), 
             		success: function(point) {
             			alert(point[0]);  
             		},
