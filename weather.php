@@ -177,9 +177,9 @@
             			alert(point);
 						console.log(point);  
             		},
-					error: function(){
-						alert("why");
-					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+     					alert(errorThrown);
+  					},
             		cache: false
         			});
 				}
