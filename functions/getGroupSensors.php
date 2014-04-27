@@ -1,5 +1,5 @@
     <?php
-	$groupName = $_POST['ID'] ;
+	$groupName = $_GET["id"] ;
 	
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db

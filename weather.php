@@ -166,17 +166,14 @@
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					alert(a);
 					<?php
-						$groupNameDisplaying = a;
+						$groupNameDisplaying = 'a';
 					?>
 					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					gauge.value(100);
 					alert("<?php echo $groupNameDisplaying;?>");
 					$.ajax({
-            		url: "functions/getGroupSensors.php",
-					type: "POST",
-    				dataType:'json', // add json datatype to get json
-     				data: ({ID: a}), 
+            		url: "functions/getGroupSensors.php?id=" + a + "", 
             		success: function(point) {
             			alert(point[0]);  
             		},
