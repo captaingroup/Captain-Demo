@@ -1,5 +1,5 @@
     <?php
-	$groupName = $_GET['id'] ;
+	//$groupName = $_GET['id'] ;
 	
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
+    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = '00000000' ";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll();
 	// Set the JSON header
