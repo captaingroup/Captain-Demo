@@ -188,7 +188,6 @@
 					?>
 					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
-					gauge.value(100);
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(data) {
@@ -217,6 +216,7 @@
 						
 						for(var i = data.length-1 ; i < data.length ; i++){
 							console.log(i + "Gauge Change");
+							gauge.value(100);
 							requestData2(data[i].SensorID);
 						}
 						
