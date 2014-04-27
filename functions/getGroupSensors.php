@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-	echo $groupName;
+	//echo $groupName;
     $sql_select = "SELECT `ID` FROM `GroupInformation` WHERE `Name` = '".$groupName."'";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll();
@@ -35,13 +35,13 @@
 			if(count($sensorIDs) > 0) {
 				foreach($sensorIDs as $sensorID) {
 					array_push($arrayIDs, $sensorID);
-					echo $sensorID;
+					//echo $sensorID;
 				}
 			}
         }
     } else {
     }
-	//echo json_encode($arrayIDs);	
+	echo json_encode($arrayIDs);	
 	//echo $groupName;
 
 ?>
