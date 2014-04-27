@@ -182,7 +182,7 @@
 				onOptionSelect : function(opt) {
 					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
-					alert(a);
+					//alert(a);
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
