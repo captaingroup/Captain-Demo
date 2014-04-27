@@ -195,8 +195,7 @@
 							console.log(i + "testing");
 							
 							var series = {
-            					id: 'series',
-            					name: 'JSON Data',
+            					id: 'series' + i,
            	 					data: []
             				}	
 							chart.addSeries(series);
