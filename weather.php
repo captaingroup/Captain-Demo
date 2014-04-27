@@ -162,13 +162,23 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-				var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
-				console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
-				<?php
-					$groupNameDisplaying = 'a';
-				?>
-				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
-				gauge.value(100);
+					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
+					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
+					
+					<?php
+						$groupNameDisplaying = 'a';
+					?>
+					
+					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+					gauge.value(100);
+					
+					$.ajax({
+            		url: 'functions/getGroupSensors.php?id=<?php echo $groupNameDisplaying;?>', 
+            		success: function(point) {
+            			alert(point[0]);  
+            		},
+            		cache: false
+        			});
 				}
 			} );
 		});	
