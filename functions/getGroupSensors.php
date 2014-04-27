@@ -36,7 +36,7 @@
         }
     } else {
     }
-	echo json_encode($arrayIDs);	
+	echo $arrayIDs[0];	
 	
 
 ?>
