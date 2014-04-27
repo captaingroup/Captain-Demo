@@ -166,7 +166,7 @@
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					alert(a);
 					<?php
-						$groupNameDisplaying = 'a';
+						$groupNameDisplaying = a;
 					?>
 					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
