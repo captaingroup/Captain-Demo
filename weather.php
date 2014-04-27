@@ -113,9 +113,9 @@
 	
 	
 	var chart;
-	function requestData(i) {
+	function requestData(i, id) {
         $.ajax({
-            url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
+            url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
                     shift = series.data.length > 20; // shift if the series is longer than 20
@@ -124,7 +124,7 @@
                 series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(requestData(i), 1000);  
+                setTimeout(requestData(i, id), 1000);  
             },
             cache: false
         });
@@ -202,7 +202,7 @@
             				}	
 							chart.addSeries(series);
 							
-							requestData(i);
+							requestData(i, data[i].SensorID);
 							
 						}
 						
