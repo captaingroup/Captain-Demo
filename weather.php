@@ -176,6 +176,8 @@
             		success: function(point) {
             			alert(point.SensorID);
 						console.log(point[0].SensorID);
+						console.log(point[1].SensorID);
+						console.log(point[2].SensorID);
             		},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
      					alert(errorThrown);
