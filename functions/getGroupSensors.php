@@ -38,7 +38,7 @@ header("Content-type: text/json");
         }
     } else {
     }
-	echo $arrayIDs[0];	
+	echo json_encode($arrayIDs);	
 	
 
 ?>
