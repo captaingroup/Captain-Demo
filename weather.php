@@ -121,7 +121,7 @@
                     shift = series.data.length > 20; // shift if the series is longer than 20
 
                 // add the point
-                chart.series[0].addPoint(eval(point), true, shift);
+                series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
                 setTimeout(requestData, 1000);  
