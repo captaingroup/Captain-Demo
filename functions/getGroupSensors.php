@@ -1,5 +1,5 @@
     <?php
-	//$groupName = urldecode($_GET["id"]) ;
+	$groupName = $_GET["id"] ;
 	
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
@@ -19,11 +19,11 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = 'Group 123' ";
+    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll(); 
-	/*$arrayIDs = array();
-    if(count($groupIDs) > 0) {
+	$arrayIDs = array();
+    /*if(count($groupIDs) > 0) {
         foreach($groupIDs as $groupID) {
 			$sql_select = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
    			$stmt = $conn->query($sql_select);
@@ -35,8 +35,9 @@
 			}
         }
     } else {
-    }
-	echo json_encode($arrayIDs);*/	
+    }*/
+	array_push($arrayIDs, 1);
+	echo json_encode($arrayIDs);	
 	
 
 ?>

@@ -172,14 +172,14 @@
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					gauge.value(100);
 					$.ajax({
-            			url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
-            			success: function(point) {
-            				alert(point[0]);  
-            			},
-						error: function(){
-							alert("why");
-						},
-            			cache: false
+            		url: 'functions/getGroupSensors.php?id=' + a, 
+            		success: function(point) {
+            			alert(point[0]);  
+            		},
+					error: function(){
+						alert("why");
+					},
+            		cache: false
         			});
 				}
 			} );
