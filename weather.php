@@ -144,7 +144,19 @@
 		});	
 	</script>    
     
-            
+    
+	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
+
+	<div class="container">
+		<section class="main clearfix">		
+			<div class="fleft">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
+					<option value="-1" selected>Select Sensor Group</option>
+				</select>
+			</div>
+		</section>
+	</div><!-- /container -->
+        
     <script type="text/javascript">		
 		$( function() {	
 			$( '#cd-dropdown' ).dropdown( {
@@ -170,7 +182,10 @@
 							console.log(i + "testing");
 							
 							
-							
+							var chart=$("#container").highcharts();
+							if (chart.series.length) {
+            					chart.series[0].remove();
+        					}
 							
 							
 							
@@ -243,19 +258,6 @@
     } else {
     }
 ?>
-
-	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
-
-	<div class="container">
-		<section class="main clearfix">		
-			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
-					<option value="-1" selected>Select Sensor Group</option>
-				</select>
-			</div>
-		</section>
-	</div><!-- /container -->
-
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
