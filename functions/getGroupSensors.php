@@ -29,8 +29,8 @@
 
    if(count($groupIDs) > 0) {
         foreach($groupIDs as $groupID) {
-			echo $groupID[0];
-			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = 2";
+			//echo $groupID[0];
+			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = '".$groupID[0]."'";
    			$stmt2 = $conn->query($sql_select2);
     		$sensorIDs = $stmt2->fetchAll(); 
 			if(count($sensorIDs) > 0) {
@@ -42,7 +42,7 @@
         }
     } else {
     }
-	//echo json_encode($arrayIDs);	
+	echo json_encode($arrayIDs);	
 	//echo $groupName;
 
 ?>
