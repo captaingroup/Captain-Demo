@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
+    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = '00000000' AND `Device Name` = 'Heart Rate' ORDER BY `Time Stamp` DESC LIMIT 1";
     $stmt = $conn->query($sql_select);
 //    $groupIDs = $stmt->fetchAll();
 	// Set the JSON header
