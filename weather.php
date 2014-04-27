@@ -182,10 +182,6 @@
 							console.log(i + "testing");
 							
 							
-							var chart=$("#container").highcharts();
-							if (chart.series.length) {
-            					chart.series[0].remove();
-        					}
 							
 							
 							
@@ -196,6 +192,10 @@
 							
 							
 						}
+						var chart=$("#container").highcharts();
+							if (chart.series.length) {
+            					chart.series[0].remove();
+        					}
 						
             		},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
