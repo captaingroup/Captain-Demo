@@ -196,7 +196,7 @@
 							
 							var series = {
             					id: 'series' + i,
-           	 					data: []
+           	 					data: requestData(i);
             				}	
 							chart.addSeries(series);
 							
