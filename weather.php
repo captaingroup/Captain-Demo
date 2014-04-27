@@ -174,7 +174,8 @@
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(point) {
-            			alert(point[0]);  
+						var yo = JSON.parse(point);
+            			alert(yo[0]);  
             		},
 					error: function(){
 						alert("why");
