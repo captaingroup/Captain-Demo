@@ -191,7 +191,7 @@
 						
 						chart.series[0].remove();
 						
-						for(var i = 0 ; i < 1 ; i++){
+						for(var i = 0 ; i < data.length ; i++){
 							console.log(i + "testing");
 							
 							var series = {
