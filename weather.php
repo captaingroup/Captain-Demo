@@ -216,7 +216,7 @@
 						
 						for(var i = data.length-1 ; i < data.length ; i++){
 							console.log(i + "Gauge Change");
-							gauge.value(100);
+							gauge.value(150);
 							requestData2(data[i].SensorID);
 						}
 						
