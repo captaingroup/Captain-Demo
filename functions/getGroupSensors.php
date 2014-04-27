@@ -22,9 +22,9 @@
     $sql_select = "SELECT `ID` FROM `GroupInformation` WHERE `Name` = 'Group 123'";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll();
-	// Set the JSON header
-//	header("Content-type: text/json"); 
-//	$arrayIDs = array();
+	//Set the JSON header
+	header("Content-type: text/json"); 
+	$arrayIDs = array();
 //	echo "bello";
 //   if(count($groupIDs) > 0) {
 //        foreach($groupIDs as $groupID) {
