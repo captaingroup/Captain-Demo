@@ -195,14 +195,14 @@
 							console.log(i + "testing");
 							
 							var series = {
-            					id: 'series' + i,
+            					id: 'series',
            	 					data: []
             				}	
 							chart.addSeries(series);
 							
 							
 							
-							function requestData() {
+							/*function requestData() {
      							$.ajax({
             						url: 'functions/live-server-data.php?id=00000000', 
             						success: function(point) {
@@ -217,7 +217,7 @@
             						},
             						cache: false
         						});
-   							}
+   							}*/
 						}
 						
 						
