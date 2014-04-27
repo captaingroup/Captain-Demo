@@ -185,7 +185,10 @@
 						
 						<!--Remove current lines on chart and add new lines to the chart !-->
 						
-						chart.series[0].remove();
+						//chart.series[0].remove();
+						while(chart.series.length > 0){
+    						chart.series[0].remove(true);
+						}
 						
 						for(var i = 0 ; i < data.length - 1 ; i++){
 							console.log(i + "testing");
