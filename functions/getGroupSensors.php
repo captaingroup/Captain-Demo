@@ -19,28 +19,28 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
-    $stmt = $conn->query($sql_select);
-    $groupIDs = $stmt->fetchAll();
+//    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
+//    $stmt = $conn->query($sql_select);
+//    $groupIDs = $stmt->fetchAll();
 	// Set the JSON header
-	header("Content-type: text/json"); 
-	$arrayIDs = array();
-	echo "bello";
-    if(count($groupIDs) > 0) {
-        foreach($groupIDs as $groupID) {
-			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
-   			$stmt2 = $conn->query($sql_select);
-    		$sensorIDs = $stmt2->fetchAll(); 
-			if(count($sensorIDs) > 0) {
-				foreach($sensorIDs as $sensorID) {
-					array_push($arrayIDs, $sensorID);
-					echo "hello";
-				}
-			}
-        }
-    } else {
-    }
-	echo json_encode($arrayIDs);	
-	
+//	header("Content-type: text/json"); 
+//	$arrayIDs = array();
+//	echo "bello";
+//   if(count($groupIDs) > 0) {
+//        foreach($groupIDs as $groupID) {
+	//		$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
+   		//	$stmt2 = $conn->query($sql_select);
+    //		$sensorIDs = $stmt2->fetchAll(); 
+	//		if(count($sensorIDs) > 0) {
+	//			foreach($sensorIDs as $sensorID) {
+	//				array_push($arrayIDs, $sensorID);
+	//				echo "hello";
+	//			}
+	//		}
+     //   }
+    //} else {
+    //}
+	//echo json_encode($arrayIDs);	
+	echo "yoyoyo";
 
 ?>
