@@ -113,22 +113,7 @@
 	
 	
 	var chart;
-	function requestData() {
-        $.ajax({
-            url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
-            success: function(point) {
-                var series = chart.series[0],
-                    shift = series.data.length > 20; // shift if the series is longer than 20
-
-                // add the point
-                chart.series[0].addPoint(eval(point), true, shift);
-
-                // call it again after one second
-                setTimeout(requestData, 1000);  
-            },
-            cache: false
-        });
-    }
+	
     $(document).ready(function() {
         chart = new Highcharts.Chart({
             chart: {
@@ -195,29 +180,28 @@
 							console.log(i + "testing");
 							
 							var series = {
-            					id: 'series',
+            					id: 'series' + i,
            	 					data: []
             				}	
 							chart.addSeries(series);
 							
-							
-							
-							/*function requestData() {
-     							$.ajax({
-            						url: 'functions/live-server-data.php?id=00000000', 
-            						success: function(point) {
-                						var series = chart.series[0],
-                    					shift = series.data.length > 20; // shift if the series is longer than 20
+							function requestData() {
+        $.ajax({
+            url: 'functions/live-server-data.php?id=<?php echo $patientID;?>', 
+            success: function(point) {
+                var series = chart.get('series' + i),
+                    shift = series.data.length > 20; // shift if the series is longer than 20
 
-                						// add the point
-                						chart.series[0].addPoint(eval(point), true, shift);
+                // add the point
+                chart.series[0].addPoint(eval(point), true, shift);
 
-                						// call it again after one second
-                						setTimeout(requestData, 1000);  
-            						},
-            						cache: false
-        						});
-   							}*/
+                // call it again after one second
+                setTimeout(requestData, 1000);  
+            },
+            cache: false
+        });
+    }
+							
 						}
 						
 						
