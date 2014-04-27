@@ -41,6 +41,6 @@
     //} else {
     //}
 	//echo json_encode($arrayIDs);	
-	echo "yoyoyo";
+	echo $groupName;
 
 ?>
