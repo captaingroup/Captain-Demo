@@ -40,7 +40,7 @@
         }
     } else {
     }
-	//echo json_encode($arrayIDs);	
-	echo $groupName;
+	echo json_encode($arrayIDs);	
+	//echo $groupName;
 
 ?>
