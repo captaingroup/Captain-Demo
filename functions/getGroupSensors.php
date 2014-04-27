@@ -41,7 +41,7 @@
         }
     } else {
     }
-	echo json_encode($arrayIDs);	
+	//echo json_encode($arrayIDs);	
 	//echo $groupName;
 
 ?>
