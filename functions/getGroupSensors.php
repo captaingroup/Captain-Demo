@@ -22,7 +22,7 @@
     $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = 'Group 123' ";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll(); 
-	$arrayIDs = array();
+	/*$arrayIDs = array();
     if(count($groupIDs) > 0) {
         foreach($groupIDs as $groupID) {
 			$sql_select = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
@@ -36,7 +36,7 @@
         }
     } else {
     }
-	echo json_encode($arrayIDs);	
+	echo json_encode($arrayIDs);*/	
 	
 
 ?>
