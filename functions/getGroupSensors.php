@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
+    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = Group 123 ";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll(); 
 	$arrayIDs = array();
