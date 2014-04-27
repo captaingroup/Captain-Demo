@@ -15,24 +15,10 @@
 		<script src="js/modernizr.custom.63321.js"></script>
 		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
 
-<?php
-		$patientID = $_GET["id"] ;
-		$groupNameDisplaying = null;
-?>
-
-
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<script>
-    function check() {
-       alert("Hi");
-    }
-</script>
 </head>
 <body>
 
-	<script>			
-		
-	</script>    
     
     
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
