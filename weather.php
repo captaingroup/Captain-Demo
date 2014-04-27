@@ -147,15 +147,15 @@
 		});	
 
 		var val = 0;
-		$(document).ready(function requestData2() {
+		$(document).ready(function requestData2(id) {
 				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 				
 				$.ajax({
-            		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
+            		url: 'functions/live-server-data.php?id='+id, 
             		success: function(point) {
             			gauge.value(point);
 						val = val + 1;
-                		setTimeout(requestData2, 1000);  
+                		setTimeout(requestData2(id), 1000);  
             		},
             		cache: false
         			});
@@ -203,6 +203,10 @@
 							
 						}
 						
+						for(var i = data.length-1 ; i < data.length ; i++){
+							console.log(i + "Gauge Change");
+							requestData2(data[i].SensorID);
+						}
 						
 						
 						<!-- END of new chart line code !-->
