@@ -189,6 +189,8 @@
 						console.log(data[1].SensorID);
 						console.log(data[2].SensorID);
 						
+						<!--Remove current lines on chart and add new lines to the chart !-->
+						
 						chart.series[0].remove();
 						
 						for(var i = 0 ; i < data.length ; i++){
@@ -204,6 +206,7 @@
 							
 						}
 						
+						<!-- END of new chart line code !-->
 						
 						
 						
