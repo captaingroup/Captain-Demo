@@ -144,19 +144,7 @@
 		});	
 	</script>    
     
-    
-	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
-
-	<div class="container">
-		<section class="main clearfix">		
-			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
-					<option value="-1" selected>Select Sensor Group</option>
-				</select>
-			</div>
-		</section>
-	</div><!-- /container -->
-        
+            
     <script type="text/javascript">		
 		$( function() {	
 			$( '#cd-dropdown' ).dropdown( {
@@ -180,6 +168,18 @@
 						
 						for(var i = 0 ; i < data.length ; i++){
 							console.log(i + "testing");
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 						}
 						
             		},
@@ -243,6 +243,19 @@
     } else {
     }
 ?>
+
+	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
+
+	<div class="container">
+		<section class="main clearfix">		
+			<div class="fleft">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
+					<option value="-1" selected>Select Sensor Group</option>
+				</select>
+			</div>
+		</section>
+	</div><!-- /container -->
+
 
 	<div class="chartContainer">
 		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
