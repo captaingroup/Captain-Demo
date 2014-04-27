@@ -176,6 +176,8 @@
             		success: function(point) {
             			alert(point.SensorID);
 						console.log(point.SensorID);  
+						var d = JSON.parse(point);
+						alert(d.SensorID);
             		},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
      					alert(errorThrown);
