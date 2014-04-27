@@ -1,40 +1,7 @@
     <?php
-	set_time_limit(0);
-ini_set('memory_limit','256M');
 	$groupName = $_GET['id'] ;
 	
-    // DB connection info
-    //TODO: Update the values for $host, $user, $pwd, and $db
-    //using the values you retrieved earlier from the portal.
-    $host = "sql3.freemysqlhosting.net";
-    $user = "sql331497";
-    $pwd = "sI2*yG2*";
-    $db = "sql331497";
-    // Connect to database.
-    try {
-        $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
-        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    }
-    catch(Exception $e){
-        die(var_dump($e));
-		echo 'did not work';
-    }
-		
-    // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
-    $stmt = $conn->query($sql_select);
-    $groupIDs = $stmt->fetchAll();
-	// Set the JSON header
-	header("Content-type: text/json"); 
-	$arrayIDs = array();
-	echo "bello";
-    if(count($groupIDs) > 0) {
-        foreach($groupIDs as $groupID) {
-			array_push($arrayIDs[0],1);
-        }
-    } else {
-    }
-	echo json_encode($arrayIDs);	
+    echo "hello";
 	
 
 ?>
