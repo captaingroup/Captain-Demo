@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-//    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
+    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
 //    $stmt = $conn->query($sql_select);
 //    $groupIDs = $stmt->fetchAll();
 	// Set the JSON header
@@ -41,6 +41,6 @@
     //} else {
     //}
 	//echo json_encode($arrayIDs);	
-	echo "yoyoyo";
+	
 
 ?>
