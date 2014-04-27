@@ -1,5 +1,5 @@
     <?php
-	$patientID = $_GET["id"] ;
+	$groupName = $_GET['id'] ;
 	
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = 'Group123' ";
+    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll();
 	// Set the JSON header
@@ -28,15 +28,7 @@
 	echo "bello";
     if(count($groupIDs) > 0) {
         foreach($groupIDs as $groupID) {
-			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
-   			$stmt2 = $conn->query($sql_select);
-    		$sensorIDs = $stmt2->fetchAll(); 
-			if(count($sensorIDs) > 0) {
-				foreach($sensorIDs as $sensorID) {
-					array_push($arrayIDs, $sensorID);
-					echo "hello";
-				}
-			}
+			array_push($arrayIDs[0],1);
         }
     } else {
     }
