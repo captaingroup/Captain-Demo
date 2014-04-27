@@ -30,70 +30,8 @@
 </head>
 <body>
 
-
-<script>
-	</script>
-	
-    
 	<script>			
-		$(function (){
-   			$('#linearGaugeContainer').dxLinearGauge({
-			scale: {
-				startValue: 0,
-				endValue: 150,
-				majorTick: {
-					tickInterval: 10
-				},
-				minorTick: {
-					visible: true,
-					tickInterval: 2
-				}
-			},
-			title: {
-				text: 'Wind-O-Meter',
-				font: { size: 28 }
-			},
-			tooltip: {
-				enabled: true
-			},
-			rangeContainer: {
-        		ranges: [{
-                	startValue: 0,
-                	endValue: 30,
-                	color: '#1E90FF'
-            	}, {
-                	startValue: 30,
-                	endValue: 80,
-                	color: '#EEC900'
-            	}, {
-                	startValue: 80,
-                	endValue: 120,
-                	color: '#FF9912'
-            	}, {
-                	startValue: 120,
-                	endValue: 200,
-                	color: '#EE2C2C'
-            	}
-        	]},
-			valueIndicator: { color: '#8E388E', offset: 10 },
-			value: 2	
-			});
-		});	
-
-		var val = 0;
-		$(document).ready(function requestData2() {
-				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
-				
-				$.ajax({
-            		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
-            		success: function(point) {
-            			gauge.value(point);
-						val = val + 1;
-                		setTimeout(requestData2, 1000);  
-            		},
-            		cache: false
-        			});
-		});	
+		
 	</script>    
     
     
@@ -164,6 +102,65 @@
 	
 	
 	
+		$(function (){
+   			$('#linearGaugeContainer').dxLinearGauge({
+			scale: {
+				startValue: 0,
+				endValue: 150,
+				majorTick: {
+					tickInterval: 10
+				},
+				minorTick: {
+					visible: true,
+					tickInterval: 2
+				}
+			},
+			title: {
+				text: 'Wind-O-Meter',
+				font: { size: 28 }
+			},
+			tooltip: {
+				enabled: true
+			},
+			rangeContainer: {
+        		ranges: [{
+                	startValue: 0,
+                	endValue: 30,
+                	color: '#1E90FF'
+            	}, {
+                	startValue: 30,
+                	endValue: 80,
+                	color: '#EEC900'
+            	}, {
+                	startValue: 80,
+                	endValue: 120,
+                	color: '#FF9912'
+            	}, {
+                	startValue: 120,
+                	endValue: 200,
+                	color: '#EE2C2C'
+            	}
+        	]},
+			valueIndicator: { color: '#8E388E', offset: 10 },
+			value: 2	
+			});
+		});	
+
+		var val = 0;
+		$(document).ready(function requestData2() {
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+				
+				$.ajax({
+            		url: 'functions/live-server-data2.php?id=<?php echo $patientID;?>', 
+            		success: function(point) {
+            			gauge.value(point);
+						val = val + 1;
+                		setTimeout(requestData2, 1000);  
+            		},
+            		cache: false
+        			});
+		});
+	
 	
 	
 		
@@ -193,7 +190,7 @@
 						
 						chart.series[0].remove();
 						
-						for(var i = 0 ; i < data.length ; i++){
+						for(var i = 0 ; i < data.length - 1 ; i++){
 							console.log(i + "testing");
 							
 							var series = {
@@ -205,6 +202,8 @@
 							requestData(i, data[i].SensorID);
 							
 						}
+						
+						
 						
 						<!-- END of new chart line code !-->
 						
