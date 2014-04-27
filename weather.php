@@ -171,15 +171,12 @@
 					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					gauge.value(100);
-					
+					alert("<?php echo $groupNameDisplaying;?>");
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=<?php echo $groupNameDisplaying;?>', 
             		success: function(point) {
             			alert(point[0]);  
             		},
-					error: function(){
-						alert("why");
-					}
             		cache: false
         			});
 				}
