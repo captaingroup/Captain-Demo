@@ -146,7 +146,20 @@
 			});
 		});	
 
-		
+		/*var val = 0;
+		$(document).ready(function requestData2(id) {
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+				
+				$.ajax({
+            		url: 'functions/live-server-data.php?id='+id, 
+            		success: function(point) {
+            			gauge.value(point);
+						val = val + 1;
+                		setTimeout(requestData2(id), 1000);  
+            		},
+            		cache: false
+        			});
+		});*/
 	
 		function requestData2(id) {
 			var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
@@ -156,7 +169,7 @@
        		        gauge.value(point);
 
                 	// call it again after one second
-                	setTimeout(requestData(i, id), 1000);  
+                	setTimeout(requestData(id), 1000);  
             	},
             	cache: false
         	});
