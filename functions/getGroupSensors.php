@@ -30,15 +30,15 @@
         foreach($groupIDs as $groupID) {
 			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
    			$stmt2 = $conn->query($sql_select);
-    //		$sensorIDs = $stmt2->fetchAll(); 
-	//		if(count($sensorIDs) > 0) {
-	//			foreach($sensorIDs as $sensorID) {
-	//				array_push($arrayIDs, $sensorID);
+    		$sensorIDs = $stmt2->fetchAll(); 
+			if(count($sensorIDs) > 0) {
+				foreach($sensorIDs as $sensorID) {
+					array_push($arrayIDs, $sensorID);
 	//				echo "hello";
-	//			}
-	//		}
-     //   }
-    } //else {
+				}
+			}
+        }
+    } else {
     }
 	//echo json_encode($arrayIDs);	
 	echo $groupName;
