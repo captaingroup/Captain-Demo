@@ -177,6 +177,9 @@
             		success: function(point) {
             			alert(point[0]);  
             		},
+					error: function(){
+						alert("why");
+					}
             		cache: false
         			});
 				}
