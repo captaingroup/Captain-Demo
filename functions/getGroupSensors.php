@@ -35,7 +35,7 @@
 			if(count($sensorIDs) > 0) {
 				foreach($sensorIDs as $sensorID) {
 					array_push($arrayIDs, $sensorID);
-	//				echo "hello";
+					echo $sensorID;
 				}
 			}
         }
