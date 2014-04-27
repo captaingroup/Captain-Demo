@@ -21,7 +21,7 @@
     // Retrieve data
     $sql_select = "SELECT `ID` FROM `GroupInformation` WHERE `Name` = 'Group 123'";
     $stmt = $conn->query($sql_select);
-//    $groupIDs = $stmt->fetchAll();
+    $groupIDs = $stmt->fetchAll();
 	// Set the JSON header
 //	header("Content-type: text/json"); 
 //	$arrayIDs = array();
