@@ -124,7 +124,7 @@
                 series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(requestData, 1000);  
+                setTimeout(requestData(i), 1000);  
             },
             cache: false
         });
