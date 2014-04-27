@@ -175,9 +175,7 @@
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(point) {
             			alert(point.SensorID);
-						console.log(point.SensorID);  
-						var d = JSON.parse(point);
-						alert(d.SensorID);
+						console.log(point[0].SensorID);
             		},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
      					alert(errorThrown);
