@@ -26,10 +26,10 @@
 	//Set the JSON header
 	header("Content-type: text/json"); 
 	$arrayIDs = array();
-
+	echo $groupIDs[0];
    if(count($groupIDs) > 0) {
         foreach($groupIDs as $groupID) {
-			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = '".$groupID."'";
+			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = 2";
    			$stmt2 = $conn->query($sql_select2);
     		$sensorIDs = $stmt2->fetchAll(); 
 			if(count($sensorIDs) > 0) {
