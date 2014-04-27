@@ -1,7 +1,7 @@
     <?php
 	$groupName = $_GET['id'] ;
 	
-    echo "hello";
+    echo $groupName;
 	
 
 ?>
