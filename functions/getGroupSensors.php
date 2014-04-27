@@ -25,11 +25,11 @@
 	//Set the JSON header
 	header("Content-type: text/json"); 
 	$arrayIDs = array();
-//	echo "bello";
-//   if(count($groupIDs) > 0) {
-//        foreach($groupIDs as $groupID) {
-	//		$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
-   		//	$stmt2 = $conn->query($sql_select);
+
+   if(count($groupIDs) > 0) {
+        foreach($groupIDs as $groupID) {
+			$sql_select2 = "SELECT `SensorID` FROM `SensorGroup` WHERE `GroupID` = ".$groupID." ";
+   			$stmt2 = $conn->query($sql_select);
     //		$sensorIDs = $stmt2->fetchAll(); 
 	//		if(count($sensorIDs) > 0) {
 	//			foreach($sensorIDs as $sensorID) {
@@ -38,8 +38,8 @@
 	//			}
 	//		}
      //   }
-    //} else {
-    //}
+    } //else {
+    }
 	//echo json_encode($arrayIDs);	
 	echo $groupName;
 
