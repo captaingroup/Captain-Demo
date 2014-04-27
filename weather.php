@@ -171,7 +171,6 @@
 					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					gauge.value(100);
-					alert("<?php echo $groupNameDisplaying;?>");
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(point) {
