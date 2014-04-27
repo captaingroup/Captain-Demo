@@ -164,7 +164,7 @@
 		function requestData2(id) {
 			var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
         	$.ajax({
-	            url: 'functions/live-server-data.php?id='+id, 
+	            url: 'functions/live-server-data2.php?id='+id, 
     	        success: function(point) {
        		        gauge.value(point);
 

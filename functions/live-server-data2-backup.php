@@ -1,5 +1,5 @@
     <?php
-	$sensorID = $_GET["id"] ;
+	$patientID = $_GET["id"] ;
 	
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
@@ -19,11 +19,11 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `Data`, `Timestamp` FROM `Data` WHERE `SensorID` = '".$sensorID."' ORDER BY `Timestamp` DESC LIMIT 1";
+    $sql_select = "SELECT `Device Name`, `Reading` FROM `4-Sensors` WHERE `Patient ID` = ".$patientID." AND `Device Name` = 'Heart Rate' ORDER BY `Time Stamp` DESC LIMIT 1";
     $stmt = $conn->query($sql_select);
-    $sensors = $stmt->fetchAll(); 
-    if(count($sensors) > 0) {
-        foreach($sensors as $sensor) {
+    $patients = $stmt->fetchAll(); 
+    if(count($patients) > 0) {
+        foreach($patients as $patient) {
 			
 			// Set the JSON header
 header("Content-type: text/json");
@@ -31,7 +31,7 @@ header("Content-type: text/json");
 // The x value is the current JavaScript time, which is the Unix time multiplied by 1000.
 $x = time() * 1000;
 // The y value is a random number
-$y = $sensor['Data']+0;
+$y = $patient['Reading']+0;
 
 // Create a PHP array and echo it as JSON
 $ret = array($x, $y);
