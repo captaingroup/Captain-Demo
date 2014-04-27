@@ -183,14 +183,46 @@
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(data) {
+						
+						
 						console.log(data[0].SensorID);
 						console.log(data[1].SensorID);
 						console.log(data[2].SensorID);
 						
-						for(var i = 0 ; i < data.length ; i++){
-							console.log(i + "testing");	
-						}
 						chart.series[0].remove();
+						
+						for(var i = 0 ; i < data.length ; i++){
+							console.log(i + "testing");
+							
+							var series = {
+            					id: 'series',
+            					name: 'JSON Data',
+           	 					data: []
+            				}	
+							chart.addSeries(series);
+							
+							
+							
+							function requestData() {
+     							$.ajax({
+            						url: 'functions/live-server-data.php?id=00000000', 
+            						success: function(point) {
+                						var series = chart.series[0],
+                    					shift = series.data.length > 20; // shift if the series is longer than 20
+
+                						// add the point
+                						chart.series[0].addPoint(eval(point), true, shift);
+
+                						// call it again after one second
+                						setTimeout(requestData, 1000);  
+            						},
+            						cache: false
+        						});
+   							}
+						}
+						
+						
+						
 						
 						
             		},
