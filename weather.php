@@ -172,14 +172,14 @@
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					gauge.value(100);
 					$.ajax({
-            		url: 'functions/getGroupSensors.php', 
-            		success: function(point) {
-            			alert(point[0]);  
-            		},
-					error: function(){
-						alert("why");
-					},
-            		cache: false
+            			url: 'functions/getGroupSensors.php', 
+            			success: function(point) {
+            				alert(point[0]);  
+            			},
+						error: function(){
+							alert("why");
+						},
+            			cache: false
         			});
 				}
 			} );
