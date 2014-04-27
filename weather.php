@@ -179,23 +179,13 @@
 						console.log(data[2].SensorID);
 						
 						for(var i = 0 ; i < data.length ; i++){
-							console.log(i + "testing");
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
+							console.log(i + "testing");	
 						}
-						var chart=$("#container").highcharts();
-							if (chart.series.length) {
-            					chart.series[0].remove();
-        					}
+						
+						//var chart=$("#container").highcharts();
+							//if (chart.series.length) {
+            					//chart.series[0].remove();
+        					//}
 						
             		},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
