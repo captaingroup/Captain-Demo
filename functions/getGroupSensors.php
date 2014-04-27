@@ -19,7 +19,7 @@
     }
 		
     // Retrieve data
-    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = Group 123 ";
+    $sql_select = "SELECT `GroupID` FROM `GroupInformation` WHERE `GroupName` = ".$groupName." ";
     $stmt = $conn->query($sql_select);
     $groupIDs = $stmt->fetchAll(); 
 	$arrayIDs = array();
@@ -30,7 +30,7 @@
     		$sensorIDs = $stmt->fetchAll(); 
 			if(count($sensorIDs) > 0) {
 				foreach($sensorIDs as $sensorID) {
-					array_push($arrayIDs, $sensorID);
+					//array_push($arrayIDs, $sensorID);
 				}
 			}
         }
