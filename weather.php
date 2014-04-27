@@ -191,11 +191,11 @@
 						
 						chart.series[0].remove();
 						
-						for(var i = 0 ; i < 2 ; i++){
+						for(var i = 0 ; i < 3 ; i++){
 							console.log(i + "testing");
 							
 							var series = {
-            					id: 'series',
+            					id: 'series' + i,
            	 					data: []
             				}	
 							chart.addSeries(series);
