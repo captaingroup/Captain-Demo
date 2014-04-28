@@ -36,25 +36,6 @@
     <script type="text/javascript">	
 	
 	
-	$.xhrPool = [];
- 
-$.xhrPool.abortAll = function() {
-  /* Original example used _underscore api
-    _.each(this, function(jqXHR) {
-        jqXHR.abort();
-    });
-  */
-    $.each(this, function(jqXHR) { 
-        jqXHR.abort(); 
-    });
-};
- 
-$.ajaxSetup({
-    beforeSend: function(jqXHR) {
-        $.xhrPool.push(jqXHR);
-    }
-});
-	
 	var chart;
 	function requestData(i, id) {
         $.ajax({
@@ -185,7 +166,6 @@ $.ajaxSetup({
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-					$.xhrPool.abortAll();
 					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					//alert(a);
