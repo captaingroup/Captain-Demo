@@ -189,13 +189,14 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
+					$.xhrPool.abortAll();
 					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					//alert(a);
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
-					$.xhrPool.abortAll();
+					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
