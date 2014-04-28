@@ -34,15 +34,14 @@
 	</div><!-- /container -->
         
     <script type="text/javascript">	
-	var escapeit = 0;
+	
 	
 	var chart;
 	function requestData(i, id) {
         $.ajax({
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
-                if(escapeit == 0){
-				var series = chart.get('series' + i),
+                var series = chart.get('series' + i),
                     shift = series.data.length > 13; // shift if the series is longer than 20
 
                 // add the point
@@ -50,10 +49,6 @@
 
                 // call it again after one second
                 setTimeout(function() {requestData(i, id)}, 2000);  
-				}
-				else{
-					return;
-				}
             },
             cache: false
         });
@@ -171,7 +166,6 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-					escapeit = 1;
 					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					//alert(a);
@@ -184,12 +178,9 @@
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(data) {
 						//chart.series[0].remove();
-						
 						while(chart.series.length > 0){
     						chart.series[0].remove(true);
 						}
-						
-						
 						
 						console.log(data[0].SensorID);
 						console.log(data[1].SensorID);
@@ -198,7 +189,7 @@
 						<!--Remove current lines on chart and add new lines to the chart !-->
 						
 						
-						escapeit = 0;
+						
 						for(var i = 0 ; i < data.length - 1 ; i++){
 							console.log(i + "testing");
 							
