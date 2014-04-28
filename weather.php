@@ -192,7 +192,7 @@ $.ajaxSetup({
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
-					$.xhrPool.abortAll();
+					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
@@ -209,7 +209,7 @@ $.ajaxSetup({
 						<!--Remove current lines on chart and add new lines to the chart !-->
 						
 						
-						
+						$.xhrPool.abortAll();
 						for(var i = 0 ; i < data.length - 1 ; i++){
 							console.log(i + "testing");
 							
