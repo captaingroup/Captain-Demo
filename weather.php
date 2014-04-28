@@ -174,7 +174,7 @@
 						$groupNameDisplaying = 'a';
 					?>
 					while(ajaxStore.length != 0){
-						ajaxStore.pop();
+						ajaxStore.pop().abort();
 					}
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
