@@ -35,29 +35,6 @@
         
     <script type="text/javascript">	
 	
-	$.xhrPool = [];
-    $.xhrPool.abortAll = function() {
-       $(this).each(function(idx, jqXHR) {
-          jqXHR.abort();
-       });
-       $.xhrPool.length = 0
-    };
-
-    $.ajaxSetup({
-      beforeSend: function(jqXHR) {
-          $.xhrPool.push(jqXHR);
-      },
-      complete: function(jqXHR) {
-         var index = $.xhrPool.indexOf(jqXHR);
-         if (index > -1) {
-            $.xhrPool.splice(index, 1);
-         }
-      }
-   });
-   
-	
-	
-	
 	
 	var chart;
 	function requestData(i, id) {
@@ -189,7 +166,6 @@
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
-					$.xhrPool.abortAll();
 					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					//alert(a);
@@ -202,9 +178,9 @@
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(data) {
 						//chart.series[0].remove();
-						while(chart.series.length > 0){
-    						chart.series[0].remove(true);
-						}
+						//while(chart.series.length > 0){
+    						//chart.series[0].remove(true);
+						//}
 						
 						console.log(data[0].SensorID);
 						console.log(data[1].SensorID);
