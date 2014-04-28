@@ -34,23 +34,21 @@
 	</div><!-- /container -->
         
     <script type="text/javascript">	
-	var group = null;
+	
 	
 	var chart;
-	function requestData(i, id, a) {
+	function requestData(i, id) {
         $.ajax({
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
-                while(group = a){
-				var series = chart.get('series' + i),
+                var series = chart.get('series' + i),
                     shift = series.data.length > 12; // shift if the series is longer than 20
 
                 // add the point
                 series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(function() {requestData(i, id)}, 2000); 
-				}
+                setTimeout(function() {requestData(i, id)}, 2000);  
             },
             cache: false
         });
@@ -174,7 +172,7 @@
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
-					group = a;
+					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
@@ -201,7 +199,7 @@
             				}	
 							chart.addSeries(series);
 							
-							requestData(i, data[i].SensorID, a);
+							requestData(i, data[i].SensorID);
 							
 						}
 						
