@@ -1,64 +1,234 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Heart Hospital</title>
+<title>Captain - Temperature Example</title>
 <link href="css/stylesheet.css" rel="stylesheet">
-<script src="http://listjs.com/no-cdn/list.js"></script> 
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="javascript/jquery-1.10.2.min.js"></script>
+<script src="javascript/globalize.min.js"></script>
+<script src="javascript/dx.chartjs.js"></script>
 
+<link rel="stylesheet" type="text/css" href="css/style1.css" />
+		<script src="js/modernizr.custom.63321.js"></script>
+		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
 
+    
+    
+	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
-<section id="loginBar"></section>
-
-<section id="currentlyAdmittedPatients">
+	<div class="container">
+		<section class="main clearfix">		
+			<div class="fleft">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
+					<option value="-1" selected>Select Sensor Group</option>
+				</select>
+			</div>
+		</section>
+	</div><!-- /container -->
+        
+    <script type="text/javascript">	
 	
-	<div id="patients">
+	
+	var chart;
+	function requestData(i, id) {
+        $.ajax({
+            url: 'functions/live-server-data.php?id='+id, 
+            success: function(point) {
+                var series = chart.get('series' + i),
+                    shift = series.data.length > 10; // shift if the series is longer than 20
 
-		<div class="CAPHeaderBar">
-    		<div class="CAPHeaderBarTitle"><p>Currently Admitted Patients</p></div>
-        	<div class="CAPHeaderBarSearch"><input class="search" /></div>
-    	</div>
-    
-    	<div class="CAPColumnHeadingsBar">
-    		<div class="CAPColumnTitle"><span class="sort" data-sort="patientID">Patient ID</span></div>
-        	<div class="CAPColumnTitle"><span class="sort" data-sort="patientName">Patient Name</span></div>
-    		<div class="CAPColumnTitle"><span class="sort" data-sort="patientAge">Age</span></div>
-    		<div class="CAPColumnTitle"><span class="sort" data-sort="medicalCondition">Medical Condition</span></div>
-    		<div class="CAPColumnTitle"><span class="sort" data-sort="dateAdmitted">Date Admitted</span></div>
-    	</div>
+                // add the point
+                series.addPoint(eval(point), true, shift);
 
-		<div class="CAPRows">
-    		<ul id="list" class="list">
-       			<li>
-           			<p id="patientID" class="patientID">0123456789</p>
-           			<p class="patientName">Jonny Walthstow</p>
-           			<p class="patientAge">25</p>
-           			<p class="medicalCondition">Atherosclerosis</p>
-           			<p class="dateAdmitted">01/01/14</p>
-       			</li>
-    		</ul>
-    	</div>
-	</div>
-    
+                // call it again after one second
+                setTimeout(requestData(i, id), 1000);  
+            },
+            cache: false
+        });
+    }
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: requestData
+                }
+            },
+            title: {
+                text: 'Live Temperature Data'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150,
+                maxZoom: 20 * 1000
+            },
+            yAxis: {
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    text: 'Value',
+                    margin: 80
+                }
+            },
+            series: [{
+                name: 'Random data',
+                data: []
+            }]
+        });     
+    });
 
-	<script>
-	var options = {
-    	valueNames: [ 'patientID', 'patientName', 'patientAge', 'medicalCondition', 'dateAdmitted']
-	};
+	
+	
+	
+		$(function (){
+   			$('#linearGaugeContainer').dxLinearGauge({
+			scale: {
+				startValue: 0,
+				endValue: 150,
+				majorTick: {
+					tickInterval: 10
+				},
+				minorTick: {
+					visible: true,
+					tickInterval: 2
+				}
+			},
+			title: {
+				text: 'Wind-O-Meter',
+				font: { size: 28 }
+			},
+			tooltip: {
+				enabled: true
+			},
+			rangeContainer: {
+        		ranges: [{
+                	startValue: 0,
+                	endValue: 30,
+                	color: '#1E90FF'
+            	}, {
+                	startValue: 30,
+                	endValue: 80,
+                	color: '#EEC900'
+            	}, {
+                	startValue: 80,
+                	endValue: 120,
+                	color: '#FF9912'
+            	}, {
+                	startValue: 120,
+                	endValue: 200,
+                	color: '#EE2C2C'
+            	}
+        	]},
+			valueIndicator: { color: '#8E388E', offset: 10 },
+			value: 2	
+			});
+		});	
 
-	var patients = new List('patients', options);
+		/*var val = 0;
+		$(document).ready(function requestData2(id) {
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+				
+				$.ajax({
+            		url: 'functions/live-server-data.php?id='+id, 
+            		success: function(point) {
+            			gauge.value(point);
+						val = val + 1;
+                		setTimeout(requestData2(id), 1000);  
+            		},
+            		cache: false
+        			});
+		});*/
+	
+		function requestData2(id) {
+			var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+        	$.ajax({
+	            url: 'functions/live-server-data2.php?id='+id, 
+    	        success: function(point) {
+       		        gauge.value(point);
 
+                	// call it again after one second
+                	setTimeout(requestData2(id), 1000);  
+            	},
+            	cache: false
+        	});
+    	}
+	
+		
+		$( function() {	
+			$( '#cd-dropdown' ).dropdown( {
+				gutter : 5,
+				onOptionSelect : function(opt) {
+					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
+					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
+					//alert(a);
+					<?php
+						$groupNameDisplaying = 'a';
+					?>
+					
+					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+					$.ajax({
+            		url: 'functions/getGroupSensors.php?id=' + a, 
+            		success: function(data) {
+						
+						
+						console.log(data[0].SensorID);
+						console.log(data[1].SensorID);
+						console.log(data[2].SensorID);
+						
+						<!--Remove current lines on chart and add new lines to the chart !-->
+						
+						//chart.series[0].remove();
+						while(chart.series.length > 0){
+    						chart.series[0].remove(true);
+						}
+						
+						for(var i = 0 ; i < data.length - 1 ; i++){
+							console.log(i + "testing");
+							
+							var series = {
+            					id: 'series' + i,
+           	 					data: []
+            				}	
+							chart.addSeries(series);
+							
+							requestData(i, data[i].SensorID);
+							
+						}
+						
+						for(var i = data.length-1 ; i < data.length ; i++){
+							console.log(i + "Gauge Change");
+							gauge.value(150);
+							requestData2(data[i].SensorID);
+						}
+						
+						
+						<!-- END of new chart line code !-->
+						
+						
+						
+						
+            		},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+     					alert(errorThrown);
+  					},
+            		cache: false
+        			});
+				}
+			} );
+		});	
 	</script>
+        
+
     
-	<script>
-	$(document).ready(function(){
-  		$('#list li:nth-child(odd)').addClass('listAlternate');
-	});
-	</script>
-    
-    
+        
     <?php
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
@@ -78,47 +248,44 @@
     }
     
     // Retrieve data
-    $sql_select = "SELECT * FROM `3-Patient`";
+    $sql_select = "SELECT * FROM `GroupInformation`";
     $stmt = $conn->query($sql_select);
-    $patients = $stmt->fetchAll(); 
-    if(count($patients) > 0) {
-        foreach($patients as $patient) {
+    $groups = $stmt->fetchAll(); 
+    if(count($groups) > 0) {
+        foreach($groups as $group) {
 			
-			$patientID = $patient['Patient ID'];
-			$patientName = $patient['Patient Name'];
-			$patientAge = $patient['Age'];
-			$medicalCondition = $patient['Medical Condition'];
-			$dateAdmitted = $patient['Date Admitted'];
+			$groupID = $group['ID'];
+			$groupName = $group['Name'];
 			
 			echo "<script>
+			id = '$groupID';
+			name = '$groupName';
 			
-			id = '$patientID';
-			name = '$patientName';
-			age = '$patientAge';
-			medicalCondition = '$medicalCondition';
-			dateAdmitted = '$dateAdmitted';
-			
-			patients.add( { patientID: id, patientName: name, patientAge:age, medicalCondition: medicalCondition, dateAdmitted: dateAdmitted } ); </script>";
+			var myobject = {
+    		'$groupID' : name
+			};
+
+			var select = document.getElementById('cd-dropdown');
+			for(index in myobject) {
+				opt = new Option(myobject[index], index);
+				opt.className = 'icon-star';
+    			select.options[select.options.length] = opt;
+			}
+			</script>";
         }
     } else {
     }
 ?>
+
+	<div class="chartContainer">
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+	</div>
     
-<script>
-	function getEventTarget(e) {
-        e = e || window.event;
-        return e.target || e.srcElement; 
-    }
+    <div class="linearGaugeContainer">
+        <div id="linearGaugeContainer" style=" background-color:#FBFBFB"></div>
+	</div>
 
-    var ul = document.getElementById('list');
-    ul.onclick = function(event) {
-        var target = getEventTarget(event);
-		var variable = event.target.parentNode.childNodes;
-		alert(variable[1].textContent);
-		window.location.href = "patient.php?id="+variable[1].textContent;
-	};</script>
-
-</section>
+    
 
 </body>
 </html>
