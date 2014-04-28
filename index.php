@@ -12,19 +12,21 @@
 <script src="javascript/dx.chartjs.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/style1.css" />
-<script src="js/modernizr.custom.63321.js"></script>
-<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+		<script src="js/modernizr.custom.63321.js"></script>
+		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
+
+    
+    
 	<div id="weatherHeader" class="weatherHeader"><h6 class="weatherHeaderText">Captain - Weather Demo</h6></div>
 
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="check();">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
 					<option value="-1" selected>Select Sensor Group</option>
 				</select>
 			</div>
@@ -32,6 +34,8 @@
 	</div><!-- /container -->
         
     <script type="text/javascript">	
+	
+	
 	var chart;
 	function requestData(i, id) {
         $.ajax({
@@ -127,6 +131,21 @@
 			value: 2	
 			});
 		});	
+
+		/*var val = 0;
+		$(document).ready(function requestData2(id) {
+				var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
+				
+				$.ajax({
+            		url: 'functions/live-server-data.php?id='+id, 
+            		success: function(point) {
+            			gauge.value(point);
+						val = val + 1;
+                		setTimeout(requestData2(id), 1000);  
+            		},
+            		cache: false
+        			});
+		});*/
 	
 		function requestData2(id) {
 			var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
@@ -192,6 +211,9 @@
 						
 						
 						<!-- END of new chart line code !-->
+						
+						
+						
 						
             		},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
