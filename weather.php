@@ -178,9 +178,9 @@
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(data) {
 						//chart.series[0].remove();
-						//while(chart.series.length > 0){
-    						//chart.series[0].remove(true);
-						//}
+						while(chart.series.length > 0){
+    						chart.series[0].remove(true);
+						}
 						
 						console.log(data[0].SensorID);
 						console.log(data[1].SensorID);
