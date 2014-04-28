@@ -12,8 +12,8 @@
 <script src="javascript/dx.chartjs.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/style1.css" />
-<script src="js/modernizr.custom.63321.js"></script>
-<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+		<script src="js/modernizr.custom.63321.js"></script>
+		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -26,7 +26,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="check();">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
 					<option value="-1" selected>Select Sensor Group</option>
 				</select>
 			</div>
@@ -42,13 +42,13 @@
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
-                    shift = series.data.length > 13; // shift if the series is longer than 20
+                    shift = series.data.length > 10; // shift if the series is longer than 20
 
                 // add the point
                 series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(function() {requestData(i, id)}, 2000);  
+                setTimeout(requestData(i, id), 1000);  
             },
             cache: false
         });
@@ -155,7 +155,7 @@
        		        gauge.value(point);
 
                 	// call it again after one second
-                	setTimeout(function() {requestData2(id)}, 1000);  
+                	setTimeout(requestData2(id), 1000);  
             	},
             	cache: false
         	});
@@ -177,10 +177,7 @@
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
             		success: function(data) {
-						//chart.series[0].remove();
-						while(chart.series.length > 0){
-    						chart.series[0].remove(true);
-						}
+						
 						
 						console.log(data[0].SensorID);
 						console.log(data[1].SensorID);
@@ -188,7 +185,10 @@
 						
 						<!--Remove current lines on chart and add new lines to the chart !-->
 						
-						
+						//chart.series[0].remove();
+						while(chart.series.length > 0){
+    						chart.series[0].remove(true);
+						}
 						
 						for(var i = 0 ; i < data.length - 1 ; i++){
 							console.log(i + "testing");
