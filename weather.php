@@ -38,9 +38,8 @@
 	var ajaxcalls = [];
 	var chart;
 	function requestData(i, id) {
-		var a;
-		ajaxcalls.push(a);
-        	a = $.ajax({
+		
+        	var a = $.ajax({
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
@@ -54,6 +53,7 @@
             },
             cache: false
         });
+		ajaxcalls.push(a);
     }
     $(document).ready(function() {
         chart = new Highcharts.Chart({
