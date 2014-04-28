@@ -155,7 +155,7 @@
        		        gauge.value(point);
 
                 	// call it again after one second
-                	setTimeout(requestData2(id), 1000);  
+                	setTimeout(function() {requestData2(id)}, 1000);  
             	},
             	cache: false
         	});
