@@ -186,6 +186,7 @@ $.ajaxSetup({
 			$( '#cd-dropdown' ).dropdown( {
 				gutter : 5,
 				onOptionSelect : function(opt) {
+					$.xhrPool.abortAll();
 					var a = opt.get(0).childNodes[0].childNodes[0].nodeValue;
 					console.log( opt.get( 0 ).childNodes[0].childNodes[0].nodeValue);
 					//alert(a);
@@ -209,7 +210,7 @@ $.ajaxSetup({
 						<!--Remove current lines on chart and add new lines to the chart !-->
 						
 						
-						$.xhrPool.abortAll();
+						
 						for(var i = 0 ; i < data.length - 1 ; i++){
 							console.log(i + "testing");
 							
