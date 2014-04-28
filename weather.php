@@ -35,7 +35,27 @@
         
     <script type="text/javascript">	
 	
-	
+	// $.xhrPool and $.ajaxSetup are the solution
+$.xhrPool = [];
+$.xhrPool.abortAll = function() {
+    $(this).each(function(idx, jqXHR) {
+        jqXHR.abort();
+    });
+    $.xhrPool = [];
+};
+
+$.ajaxSetup({
+    beforeSend: function(jqXHR) {
+        $.xhrPool.push(jqXHR);
+    },
+    complete: function(jqXHR) {
+        var index = $.xhrPool.indexOf(jqXHR);
+        if (index > -1) {
+            $.xhrPool.splice(index, 1);
+        }
+    }
+});
+
 	var chart;
 	function requestData(i, id) {
         $.ajax({
@@ -172,7 +192,7 @@
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
-					
+					$.xhrPool.abortAll();
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
