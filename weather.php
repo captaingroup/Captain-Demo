@@ -35,13 +35,12 @@
         
     <script type="text/javascript">	
 	
-	var ajaxStore = Array();
+	
 	var chart;
 	function requestData(i, id) {
         $.ajax({
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
-				ajaxStore.push(this);
                 var series = chart.get('series' + i),
                     shift = series.data.length > 13; // shift if the series is longer than 20
 
@@ -173,9 +172,7 @@
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
-					while(ajaxStore.length != 0){
-						ajaxStore.pop().abort();
-					}
+					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
             		url: 'functions/getGroupSensors.php?id=' + a, 
