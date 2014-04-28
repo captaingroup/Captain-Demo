@@ -35,12 +35,10 @@
         
     <script type="text/javascript">	
 	
-	var ajaxcalls = [];
+	
 	var chart;
 	function requestData(i, id) {
-		var a;
-		ajaxcalls.push(a);
-        	a = $.ajax({
+        $.ajax({
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
@@ -174,9 +172,6 @@
 					<?php
 						$groupNameDisplaying = 'a';
 					?>
-					while(ajaxcalls.length != 0){
-						ajaxcalls.pop().abort();
-					}
 					
 					var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
 					$.ajax({
