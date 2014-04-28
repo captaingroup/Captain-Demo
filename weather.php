@@ -59,6 +59,15 @@ $.ajaxSetup({
 	var chart;
 	function requestData(i, id) {
         $.ajax({
+			beforeSend: function(jqXHR) {
+        $.xhrPool.push(jqXHR);
+    },
+    complete: function(jqXHR) {
+        var index = $.xhrPool.indexOf(jqXHR);
+        if (index > -1) {
+            $.xhrPool.splice(index, 1);
+        }
+    },
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
@@ -170,6 +179,15 @@ $.ajaxSetup({
 		function requestData2(id) {
 			var gauge = $('#linearGaugeContainer').dxLinearGauge('instance');
         	$.ajax({
+				beforeSend: function(jqXHR) {
+        $.xhrPool.push(jqXHR);
+    },
+    complete: function(jqXHR) {
+        var index = $.xhrPool.indexOf(jqXHR);
+        if (index > -1) {
+            $.xhrPool.splice(index, 1);
+        }
+    },
 	            url: 'functions/live-server-data2.php?id='+id, 
     	        success: function(point) {
        		        gauge.value(point);
