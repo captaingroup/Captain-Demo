@@ -48,7 +48,7 @@
                 series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(requestData(i, id), 1000);  
+                setTimeout(function() {requestData(i, id)}, 2000);  
             },
             cache: false
         });
