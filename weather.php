@@ -26,7 +26,7 @@
 	<div class="container">
 		<section class="main clearfix">		
 			<div class="fleft">
-				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onchange="check();">
+				<select id="cd-dropdown" name="cd-dropdown" class="cd-select" onChange="check();">
 					<option value="-1" selected>Select Sensor Group</option>
 				</select>
 			</div>
@@ -42,7 +42,7 @@
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
-                    shift = series.data.length > 10; // shift if the series is longer than 20
+                    shift = series.data.length > 40; // shift if the series is longer than 20
 
                 // add the point
                 series.addPoint(eval(point), true, shift);
