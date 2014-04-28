@@ -42,13 +42,13 @@
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
-                    shift = series.data.length > 20; // shift if the series is longer than 20
+                    shift = series.data.length > 10; // shift if the series is longer than 20
 
                 // add the point
                 series.addPoint(eval(point), true, shift);
 
                 // call it again after one second
-                setTimeout(requestData(i, id), 2000);  
+                setTimeout(requestData(i, id), 1000);  
             },
             cache: false
         });
