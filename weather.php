@@ -59,7 +59,7 @@
                 renderTo: 'container',
                 defaultSeriesType: 'spline',
                 events: {
-                    load: requestData(1,2)
+                    load: requestData
                 }
             },
             title: {
