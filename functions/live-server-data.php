@@ -34,7 +34,7 @@ $x = time() * 1000;
 $y = $sensor['Data']+0;
 
 // Create a PHP array and echo it as JSON
-$ret = array($y, $y);
+$ret = array($x, $y);
 echo json_encode($ret);
 
         }

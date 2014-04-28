@@ -12,8 +12,8 @@
 <script src="javascript/dx.chartjs.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/style1.css" />
-		<script src="js/modernizr.custom.63321.js"></script>
-		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+<script src="js/modernizr.custom.63321.js"></script>
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -42,7 +42,7 @@
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
-                    shift = series.data.length > 10; // shift if the series is longer than 20
+                    shift = series.data.length > 20; // shift if the series is longer than 20
 
                 // add the point
                 series.addPoint(eval(point), true, shift);
