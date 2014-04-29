@@ -63,7 +63,7 @@
                 }
             },
             title: {
-                text: 'Live Temperature Data'
+                text: 'Live Air Pressure'
             },
             xAxis: {
                 type: 'datetime',
