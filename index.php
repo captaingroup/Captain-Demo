@@ -42,7 +42,7 @@
             url: 'functions/live-server-data.php?id='+id, 
             success: function(point) {
                 var series = chart.get('series' + i),
-                    shift = series.data.length > 13; // shift if the series is longer than 20
+                    shift = series.data.length > 20; // shift if the series is longer than 20
 
                 // add the point
                 series.addPoint(eval(point), true, shift);
