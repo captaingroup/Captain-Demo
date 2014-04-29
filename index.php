@@ -194,7 +194,7 @@
 							console.log(i + "testing");
 							
 							var series = {
-            					id: 'sensor' + i,
+            					id: 'series' + i,
            	 					data: []
             				}	
 							chart.addSeries(series);
